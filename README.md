@@ -14,7 +14,7 @@ I’m actively practicing SQL through:
 
 - **Guided tutorials** that reinforce core skills  
 - **Challenges** that stretch my ability to solve problems  
--**Real-world datasets** that mimic on-the-job tasks
+- **Real-world datasets** that mimic on-the-job tasks
 
 The purpose is not only to learn, but to **showcase the practical, transferable skills** that would be used in a real data analyst or data engineer role.
 
