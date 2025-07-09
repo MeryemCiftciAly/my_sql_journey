@@ -8,7 +8,7 @@
 
 ## 👋 Welcome
 
-This repository documents my journey learning SQL — from foundational syntax to more advanced querying and warehouse design.
+This repository documents my journey learning SQL from foundational syntax to more advanced querying and warehouse design.
 
 I’m actively practicing SQL through:
 
@@ -33,6 +33,6 @@ The purpose is not only to learn, but to **showcase the practical, transferable 
 
 There’s often little difference between someone learning SQL in university and someone doing so independently — **except for how the skills are applied**.
 
-In my case, I’ve chosen to learn through doing — using **industry tools**, solving **real problems**, and documenting the process publicly.
+In my case, I’ve chosen to learn through doing using **industry tools**, solving **real problems**, and documenting the process publicly.
 
 This repo is updated regularly as I continue building stronger fluency and confidence in SQL.
