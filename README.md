@@ -1,7 +1,7 @@
 # SQL Learning Journal
 
 📅 **Started:** 2024  
-**Tools:** MySQL Workbench, GitHub, Kaggle  
+**Tools:** PostgreSQL, GitHub, Kaggle  
 **Focus Areas:** Query Design, Data Modeling, Optimization, Warehousing
 
 ---
