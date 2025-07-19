@@ -43,7 +43,6 @@ This project is accompanied by a **clickable timeline**, shared on LinkedIn, tha
 
 Each timeline point links to the related GitHub folder, file, or notebook to make it easy for others to follow the journey.
 
-Dataset Used: https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5/data_preview
 ---
 
 ### 🔗 More About My Work
