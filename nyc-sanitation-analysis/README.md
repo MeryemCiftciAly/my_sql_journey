@@ -4,7 +4,7 @@ Date: July 19, 2025
 
 ## 📌 Project Overview
 
-This project was inspired by a public dataset from the **[New York City Department of Sanitation]**(https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5/data_preview), which tracks monthly waste tonnage across boroughs and waste types over several years. As I explored the dataset, several questions sparked my curiosity, and I decided to develop a full mini-project around it.
+This project was inspired by a public dataset from the **[New York City Department of Sanitation](https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5/data_preview)**, which tracks monthly waste tonnage across boroughs and waste types over several years. As I explored the dataset, several questions sparked my curiosity, and I decided to develop a full mini-project around it.
 
 This project allowed me to combine SQL practice with storytelling, data exploration, and public presentation using tools like PowerPoint and Excel.
 
