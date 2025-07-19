@@ -1,3 +1,5 @@
+--This was a practice dataset I created to practice using SELECT in SQL
+
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     first_name VARCHAR(50),
