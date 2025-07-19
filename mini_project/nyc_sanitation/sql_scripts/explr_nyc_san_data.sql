@@ -1,4 +1,4 @@
--- Checking cleaned dataset
+/* Date: July 10, 2025: This is a data cleaning practice using a sanitation dataset taken from NYC Department of Sanitation public data Checking cleaned dataset */
 
 SELECT * FROM cleaned_sanitation_data
 LIMIT 10;
