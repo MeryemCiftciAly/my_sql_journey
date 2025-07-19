@@ -1,1 +1,0 @@
-SELECT 'Hello, Nancy Drew' AS message;
