@@ -1,4 +1,4 @@
---This was a practice dataset I created to practice using SELECT in SQL
+--Date: July 16 2025: This was a practice dataset I created to practice using SELECT in SQL
 
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
