@@ -1,4 +1,4 @@
-/* STEP 1: Exploring the Messy New York Department of Sanitation dataset */
+/* Date July 18 2025: Exploring amd cleaning the Messy New York Department of Sanitation dataset */
 
 SELECT * FROM sanitation_data
 LIMIT 10;
