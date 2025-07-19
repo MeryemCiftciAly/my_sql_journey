@@ -1,5 +1,5 @@
--- Retrieving data
-SELECT * FROM customers;
+-- Date: July 2, 2025: Practing retrieving date from a customers dataset I made up.
+
 
 -- Retrieving based on country
 SELECT 
@@ -14,7 +14,7 @@ SELECT *
 FROM customers
 ORDER BY income DESC;
 
---Sorting the result
+--Sorting the result by income
 SELECT *
 FROM customers
 ORDER BY income;
@@ -43,7 +43,7 @@ FROM customers
 GROUP BY country
 ORDER BY sum(income) DESC;
 
---Filtering the data
+--Filtering the data after aggregation
 
 SELECT
 	country,
@@ -59,10 +59,10 @@ country
 FROM customers;
 
 --Specifying rows needed
---SELECT LIMIT 5 * -- This is MySQL
+--SELECT LIMIT 5 * --This is MySQL
 --FROM customers;
 
-SELECT * FROM customers
+SELECT * FROM customers --This is PostgreSQL
 LIMIT 5;
 
 --SELECT TOP 3 * -- This is MySQL
@@ -70,11 +70,11 @@ LIMIT 5;
 --ORDER BY income DESC;
 
 SELECT * FROM customers
-ORDER BY income DESC
+ORDER BY income DESC --sorting in descending order making the highest value on top
 LIMIT 5;
 
 SELECT * FROM customers
-ORDER BY income ASC
+ORDER BY income ASC --sorting in ascending order making the lowest value on top
 LIMIT 5;
 
 -- Sorting by dates
