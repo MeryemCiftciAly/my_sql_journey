@@ -1,3 +1,5 @@
+--Question: Which borough generated the most total refuse waste overall?
+
 SELECT 
 borough,
 -- Summing all waste to give one single value
