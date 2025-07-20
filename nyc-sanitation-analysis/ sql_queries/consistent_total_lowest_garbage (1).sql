@@ -1,4 +1,4 @@
---Question: Which borough generated the most total refuse waste overall?
+--Question: Which borough generated the lowest total waste across all categories (refuse + paper + MGP + organics)?
 
 SELECT 
 borough,
@@ -23,4 +23,4 @@ FROM cleaned_sanitation_data
 GROUP BY
    borough
  ORDER BY
-   "Total Waste";
+   "Total Waste" ASC;
