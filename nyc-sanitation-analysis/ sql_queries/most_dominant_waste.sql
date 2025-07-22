@@ -9,8 +9,7 @@ SELECT
 	SUM(res_organics_tons) AS Organics_SUM,
 	SUM(school_organic_tons) AS School_Organic_SUM,
 	SUM(leaves_organic_tons) AS Leaves_Organic_SUM,
-	SUM(xmas_tree_ton) AS xmas_Tree_SUM,
-	SUM(refuse_tons_collected + paper_tons_collected + mgp_tons_collected + res_organics_tons + school_organic_tons + leaves_organic_tons + xmas_tree_ton) 
+	SUM(xmas_tree_ton) AS xmas_Tree_SUM	
 FROM cleaned_sanitation_data;
 
 --Quering data. This will give the same results as above but in a narrow sorted view.
