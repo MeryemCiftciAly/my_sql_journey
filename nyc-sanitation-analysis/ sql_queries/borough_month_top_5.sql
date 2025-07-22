@@ -13,11 +13,11 @@ WITH top_five AS(
 		res_organics_tons +
 		school_organic_tons  +
 		leaves_organic_tons +
-		xmas_tree_ton) AS “total_waste”
+		xmas_tree_ton) AS total_waste
  FROM cleaned_sanitation_data
 GROUP BY year, borough, month
 )
 SELECT *
 FROM  top_five 
-ORDER BY “total_waste” DESC
+ORDER BY total_waste DESC
 LIMIT 5;
