@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Data Project Timeline</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for the hand icon */
+        .hand-icon {
+            display: inline-block;
+            transform: rotate(90deg); /* Rotate to point right */
+            font-size: 1.25rem; /* Adjust size as needed */
+            color: #4a90e2; /* Match primary color */
+            margin-left: 0.5rem;
+        }
+
+        /* Main timeline container */
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Central vertical line */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            background-color: #cbd5e0; /* light gray */
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Individual timeline item */
+        .timeline-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 4rem; /* Space between items */
+        }
+
+        /* Dot on the central line */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: #4a90e2; /* Blue */
+            border-radius: 50%;
+            z-index: 10; /* Above the line */
+        }
+
+        /* Connecting horizontal line from dot to bubble */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            background-color: #cbd5e0; /* light gray */
+            z-index: 5; /* Below the dot, above the main line */
+        }
+
+        /* Styling for the content bubble */
+        .timeline-bubble {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            padding: 1.5rem; /* p-6 */
+            width: calc(50% - 40px); /* Half width minus space for dot/line */
+            min-width: 280px; /* Ensure readability */
+            position: relative;
+            z-index: 1; /* Above lines */
+            cursor: pointer; /* Indicate clickability for modal triggers */
+        }
+
+        /* Left-aligned items (odd children) */
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-start;
+            padding-right: 50%; /* Push content to the left of the center line */
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: calc(50% - 8px); /* Position dot on the right of the left item, centered on line */
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: calc(50% - 8px); /* Start from dot */
+            width: calc(50% - 8px - 1.5rem); /* Extend to bubble's right edge */
+        }
+
+        /* Right-aligned items (even children) */
+        .timeline-item:nth-child(even) {
+            justify-content: flex-end;
+            padding-left: 50%; /* Push content to the right of the center line */
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: calc(50% - 8px); /* Position dot on the left of the right item, centered on line */
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: calc(50% - 8px); /* Start from dot */
+            width: calc(50% - 8px - 1.5rem); /* Extend to bubble's left edge */
+        }
+
+        /* Icon within the bubble */
+        .icon-circle {
+            background-color: #4a90e2; /* Blue color for circles */
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.75rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            transition: transform 0.2s ease-in-out;
+            flex-shrink: 0; /* Prevent shrinking on small screens */
+        }
+
+        .timeline-bubble:hover .icon-circle {
+            transform: translateY(-3px);
+        }
+
+        .node-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem; /* text-lg */
+        }
+
+        .node-description {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
+
+        .link-section a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a90e2;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .link-section a:hover {
+            color: #357ABD;
+        }
+
+        /* Modal specific styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .modal-close-button:hover {
+            color: #333;
+        }
+
+        .modal-button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s ease-in-out;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .modal-button:hover {
+            background-color: #357ABD;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 20px; /* Move central line to the left */
+                transform: translateX(0);
+            }
+
+            .timeline-item {
+                justify-content: flex-end; /* All content bubbles on the right */
+                padding-left: 60px; /* Space for line and dot */
+                padding-right: 0;
+            }
+
+            .timeline-item::before {
+                left: 20px; /* Align dots to the left line */
+                right: auto;
+                margin-left: -8px; /* Center dot on line */
+            }
+
+            .timeline-item::after {
+                left: calc(20px + 8px); /* Start from dot */
+                width: calc(1.5rem + 10px); /* Short connecting line to bubble */
+                right: auto;
+            }
+
+            .timeline-bubble {
+                width: 100%; /* Full width on mobile */
+                min-width: unset; /* Remove min-width constraint */
+                margin-left: 1rem; /* Space from the line */
+                text-align: left; /* Align text within bubble */
+            }
+
+            .link-section a {
+                justify-content: flex-start; /* Align links to the left */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans antialiased p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-10 mt-8">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-gray-800 mb-12">
+            NYC Sanitation Waste Analysis Timeline
+        </h1>
+
+        <div class="timeline-container">
+
+            <!-- Node 1: Data Downloaded & Cleaned (Left) - Triggers Data Source Modal -->
+            <div class="timeline-item" onclick="openDataSourceModal()">
+                <div class="timeline-bubble">
+                    <div class="icon-circle mx-auto">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="node-title text-center">Data Downloaded & Cleaned</div>
+                    <div class="node-description text-center">
+                        Retrieved and meticulously cleaned data, handling duplicates, nulls, and enriching as needed. Click for source info.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node 2: Loaded into PostgreSQL (Right) -->
+            <div class="timeline-item">
+                <div class="timeline-bubble">
+                    <div class="icon-circle mx-auto">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="node-title text-center">Loaded into PostgreSQL</div>
+                    <div class="node-description text-center">
+                        Prepared data for efficient querying and analysis within the database.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node 3: Exploratory SQL Queries (Left) - Triggers Navigation Modal -->
+            <div class="timeline-item" onclick="openNavigationModal('YOUR_GITHUB_SQL_REPO_URL')">
+                <div class="timeline-bubble">
+                    <div class="icon-circle mx-auto">
+                        <i class="fas fa-search"></i> <!-- Using search icon for queries -->
+                    </div>
+                    <div class="node-title text-center">Exploratory SQL Queries</div>
+                    <div class="node-description text-center">
+                        Pulled key insights using complex SQL queries. Click to view on GitHub.
+                    </div>
+                    <div class="link-section">
+                        <a href="#" class="pointer-events-none">
+                            View SQL Queries <span class="hand-icon">&#128073;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node 4: Excel Analysis (Pivot Tables & Charts) (Right) - Triggers Navigation Modal -->
+            <div class="timeline-item" onclick="openNavigationModal('YOUR_EXCEL_FILE_URL')">
+                <div class="timeline-bubble">
+                    <div class="icon-circle mx-auto">
+                        <i class="fas fa-file-excel"></i> <!-- Excel icon -->
+                    </div>
+                    <div class="node-title text-center">Excel Analysis</div>
+                    <div class="node-description text-center">
+                        Performed in-depth analysis using pivot tables and created insightful charts from SQL output. Click to view Excel.
+                    </div>
+                    <div class="link-section">
+                        <a href="#" class="pointer-events-none">
+                            View Excel File <span class="hand-icon">&#128073;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node 5: NEW - Kaggle Analysis (Left) - Triggers Navigation Modal -->
+            <div class="timeline-item" onclick="openNavigationModal('YOUR_KAGGLE_PROJECT_URL')">
+                <div class="timeline-bubble">
+                    <div class="icon-circle mx-auto">
+                        <i class="fas fa-brain"></i> <!-- Using brain/analytics icon for Kaggle Analysis -->
+                    </div>
+                    <div class="node-title text-center">Kaggle Analysis</div>
+                    <div class="node-description text-center">
+                        Found patterns and applied advanced analytical techniques. Click to view on Kaggle.
+                    </div>
+                    <div class="link-section">
+                        <a href="#" class="pointer-events-none">
+                            View Kaggle Project <span class="hand-icon">&#128073;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node 6: Storytelling in PowerPoint (Right) - Triggers Navigation Modal -->
+            <div class="timeline-item" onclick="openNavigationModal('YOUR_POWERPOINT_PRESENTATION_URL')">
+                <div class="timeline-bubble">
+                    <div class="icon-circle mx-auto">
+                        <i class="fas fa-file-powerpoint"></i> <!-- PowerPoint icon -->
+                    </div>
+                    <div class="node-title text-center">Storytelling in PowerPoint</div>
+                    <div class="node-description text-center">
+                        Created a compelling presentation to share key findings and insights. Click to view presentation.
+                    </div>
+                    <div class="link-section">
+                        <a href="#" class="pointer-events-none">
+                            View Presentation <span class="hand-icon">&#128073;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <div class="mt-16 p-4 text-left text-gray-600 text-sm">
+            <p>Prepared by Kamara Rowe-Ciftci (Meryem)</p>
+            <a href="https://www.linkedin.com/company/nuuraqlyz_analytics" target="_blank" rel="noopener noreferrer" class="flex items-center mt-1 text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                <img src="https://raw.githubusercontent.com/MeryemCiftciAly/nuuraqlyz_analytics/refs/heads/main/media/nuuraqlyz_analytics_logo.png" alt="Nuuraqlyz Analytics Logo" class="h-12 w-12 mr-3 rounded-full">
+                <span class="text-base font-semibold">Nuuraqlyz Analytics</span>
+            </a>
+            <p class="mt-1">July 26, 2025</p>
+        </div>
+
+    </div>
+
+    <!-- Generic Modal Structure -->
+    <div id="myModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-button" onclick="closeModal()">&times;</button>
+            <h3 id="modalTitle" class="text-2xl font-bold text-gray-800 mb-4"></h3>
+            <div id="modalBody" class="text-gray-700 leading-relaxed"></div>
+            <div class="flex justify-end gap-4 mt-6">
+                <button id="modalCancelButton" class="modal-button bg-gray-300 hover:bg-gray-400 text-gray-800" onclick="closeModal()">Cancel</button>
+                <a id="modalActionButton" href="#" target="_blank" rel="noopener noreferrer" class="modal-button hidden"></a>
+                <button id="modalCopyButton" class="modal-button bg-blue-500 hover:bg-blue-600 hidden" onclick="copySourceUrl()">Copy URL</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('myModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+        const modalActionButton = document.getElementById('modalActionButton');
+        const modalCancelButton = document.getElementById('modalCancelButton');
+        const modalCopyButton = document.getElementById('modalCopyButton');
+
+        let currentActionUrl = ''; // To store the URL for navigation
+
+        function openModal(title, content, actionBtnText = null, actionBtnUrl = null, isExternal = false, showCopy = false, sourceUrl = null, rawDataUrl = null, cleanedDataUrl = null) {
+            modalTitle.textContent = title;
+            modalBody.innerHTML = content;
+
+            // Reset buttons
+            modalActionButton.classList.add('hidden');
+            modalCancelButton.classList.remove('hidden'); // Always show cancel/close
+            modalCopyButton.classList.add('hidden');
+            modalActionButton.onclick = null; // Clear previous click handler
+
+            if (actionBtnText && actionBtnUrl) {
+                modalActionButton.textContent = actionBtnText;
+                modalActionButton.href = actionBtnUrl;
+                modalActionButton.classList.remove('hidden');
+                currentActionUrl = actionBtnUrl; // Store URL for direct navigation
+            }
+
+            if (showCopy && sourceUrl) {
+                modalCopyButton.classList.remove('hidden');
+                modalCopyButton.dataset.sourceUrl = sourceUrl; // Store URL in a data attribute
+            }
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            // Clear content and reset for next use
+            modalTitle.textContent = '';
+            modalBody.innerHTML = '';
+            modalActionButton.classList.add('hidden');
+            modalCopyButton.classList.add('hidden');
+            currentActionUrl = '';
+        }
+
+        // Function to open the Data Source Modal
+        function openDataSourceModal() {
+            const sourceUrl = "https://www.nyc.gov/site/dsny/about/initiatives/waste-data.page"; // Example URL
+            const rawDataLink = "YOUR_RAW_DATA_FILE_URL"; // Replace with your raw data link
+            const cleanedDataLink = "YOUR_CLEANED_DATA_FILE_URL"; // Replace with your cleaned data link
+
+            const content = `
+                <p class="mb-4">This project utilizes publicly available waste data from the NYC Department of Sanitation.</p>
+                <p class="font-semibold mb-2">Original Data Source:</p>
+                <p class="bg-gray-100 p-3 rounded-md text-sm break-all mb-4">${sourceUrl}</p>
+                <p class="mb-2">You can find my processed data here:</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><a href="${rawDataLink}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Raw Data File</a></li>
+                    <li><a href="${cleanedDataLink}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Cleaned Data File</a></li>
+                </ul>
+            `;
+            openModal("Data Source Information", content, null, null, false, true, sourceUrl);
+        }
+
+        // Function to open the Navigation Warning Modal
+        function openNavigationModal(targetUrl) {
+            const content = `
+                <p>You are about to navigate away from this project page to an external resource.</p>
+                <p class="mt-2">Would you like to continue?</p>
+            `;
+            openModal("Navigating Away", content, "Continue", targetUrl, true);
+        }
+
+        // Function to copy source URL to clipboard
+        function copySourceUrl() {
+            const urlToCopy = modalCopyButton.dataset.sourceUrl;
+            if (urlToCopy) {
+                navigator.clipboard.writeText(urlToCopy)
+                    .then(() => {
+                        // Using a simple alert for demonstration. For a real app, consider a custom toast message.
+                        alert("URL copied to clipboard!");
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy URL: ', err);
+                        alert("Failed to copy URL. Please copy it manually.");
+                    });
+            }
+        }
+    </script>
+
+</body>
+</html>
