@@ -74,6 +74,6 @@ View the project here → [Data Warehouse Project](https://github.com/MeryemCift
 
 The layout below is the **current and planned organization** for this repository.  
 Some folders are in use now, while others are placeholders for future work as my SQL skillset grows into cloud engineering and automation.  
-This structure may evolve over time to better fit active projects and workflow
+This structure may evolve over time to better fit active projects and workflow.
 
 
