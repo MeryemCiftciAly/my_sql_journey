@@ -53,8 +53,8 @@ All About Baraa #NominateBaraa
 
 📺 [YouTube](https://www.youtube.com/@DataWithBaraa)
 🎓 [Udemy Courses](https://bit.ly/4hH947P)
-💼 [LinkedIn](https://linkedin.com/in/ baraa-khatib-salkini)
-📰 [Newsletter]((http://bit.ly/3GiCVUE))
+💼 [LinkedIn](https://linkedin.com/in/baraa-khatib-salkini)
+📰 [Newsletter](http://bit.ly/3GiCVUE)
 
 🚀 Stay Tuned
 This is just the beginning — I’ll be updating this journal regularly with new challenges, code samples, and reflections from my journey.
