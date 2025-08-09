@@ -1,27 +1,15 @@
 #International Sanctions Insights
 
-[![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)](https://www.postgresql.org/)
-[![Power BI](https://img.shields.io/badge/Visualization-Power%20BI-yellow)](https://powerbi.microsoft.com/)
-[![SQL](https://img.shields.io/badge/Language-SQL-lightgrey)](https://en.wikipedia.org/wiki/SQL)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-
-## 📑 Table of Contents
-- [Overview](#overview)
-- [Objectives](#objectives)
-- [Methodology](#methodology)
-- [Deliverables](#deliverables)
-- [References & Attribution](#references--attribution)
-
 ---
 
-## 📜 Overview
+## Overview
 **International Sanctions Insights** is a data analysis project aimed at exploring the dynamics, effectiveness, and trends of sanctions between countries.  
 Using a dataset provided by **Drexel University** and the **Austrian Institute of Economic Research**, this project applies **PostgreSQL** for data exploration and **Power BI** for visualization.  
 The end result will be a **multi-page Power BI report** and an **interactive dashboard** answering core questions on the purpose, execution, and success rates of sanctions.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 We aim to address the following themes:
 
 1. **The Why** – Why sanctions are imposed (objectives and triggers).  
@@ -32,7 +20,7 @@ We aim to address the following themes:
 
 ---
 
-## 🛠 Methodology
+## Methodology
 
 1. **Data Preparation**  
    - Load and clean the dataset in **PostgreSQL**.  
@@ -58,7 +46,7 @@ We aim to address the following themes:
 
 ---
 
-## 📦 Deliverables
+## Deliverables
 - SQL scripts for data cleaning and querying.  
 - Multi-page **Power BI report**.  
 - **Power BI dashboard** with top KPIs and visuals.  
@@ -66,7 +54,7 @@ We aim to address the following themes:
 
 ---
 
-## 📚 References & Attribution
+## References & Attribution
 - Dataset provided by **Drexel University** and the **Austrian Institute of Economic Research**.  
 - SQL scripting guidance inspired by **DataWithBaraa**:  
   [https://www.youtube.com/@DataWithBaraa](https://www.youtube.com/@DataWithBaraa)  
@@ -75,5 +63,5 @@ We aim to address the following themes:
 
 ---
 
-## 📌 License
+## License
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
