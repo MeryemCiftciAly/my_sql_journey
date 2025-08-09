@@ -1,4 +1,4 @@
-#International Sanctions Insights
+# International Sanctions Insights
 
 ---
 
