@@ -70,4 +70,50 @@ All About Baraa → #NominateBaraa
 💡 I also did a **data warehouse project** out of curiosity to see what I would learn.  
 View the project here → [Data Warehouse Project](https://github.com/MeryemCiftciAly/data-warehouse-project-sql)
 
-## Repo Structure
+## 📂 Repository Structure
+
+The layout below is the **current and planned organization** for this repository.  
+Some folders are in use now, while others are placeholders for future work as my SQL skillset grows into cloud engineering and automation.  
+This structure may evolve over time to better fit active projects and workflow
+
+.
+├── README.md                        # Repository overview
+├── .gitignore                        # Files/folders to ignore in Git
+│
+├── sql_practice/                     # Hands-on learning & skill drills
+│   ├── 00_basics/                     # Core syntax: SELECT, WHERE, ORDER BY
+│   ├── 01_aggregations/               # COUNT, SUM, AVG, GROUP BY
+│   ├── 02_joins/                      # INNER, LEFT, RIGHT, FULL
+│   ├── 03_subqueries_ctes/            # Nested queries, CTEs
+│   ├── 04_window_functions/           # RANK, ROW_NUMBER, PARTITION
+│   ├── 05_data_cleaning/               # REPLACE, TRIM, string/date cleaning
+│   ├── 06_performance_optimization/    # Index usage, EXPLAIN plans
+│   └── 99_miscellaneous/               # Odd cases, random practice
+│
+├── projects/                          # Real-world, portfolio-level work
+│   ├── nyc_sanitation_analysis/        # Example project
+│   │   ├── data/                       # Raw & cleaned datasets
+│   │   ├── initial_queries/            # Data exploration scripts
+│   │   ├── transformations/            # Cleaning, reshaping
+│   │   ├── analysis/                    # Insights, aggregations
+│   │   └── README.md                   # Project-specific documentation
+│   |
+│   │
+│   └── (future_projects_here)/
+│
+├── cloud_sql/                          # Cloud-focused SQL scripts
+│   ├── bigquery/                        # Google BigQuery examples
+│   ├── redshift/                        # AWS Redshift scripts
+│   ├── snowflake/                       # Snowflake-specific queries
+│   └── azure_synapse/                   # Azure Synapse examples
+│
+├── automation_scripts/                  # Automation & DevOps for SQL
+│   ├── python/                           # Python automation for SQL tasks
+│   ├── bash/                             # Shell scripts for DB ops
+│   └── airflow/                          # Airflow DAGs for SQL workflows
+│
+└── docs/                                 # Documentation, ERDs, diagrams
+    ├── schema_diagrams/                  # Database diagrams
+    ├── project_overviews/                # PDF/Markdown summaries
+    └── learning_notes/                   # Notes, cheat sheets
+
