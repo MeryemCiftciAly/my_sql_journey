@@ -51,7 +51,10 @@ A special thanks to Baraa Khatib-Salkini for creating the roadmap template and i
 
 All About Baraa #NominateBaraa
 
-📺 YouTube | 🎓 Udemy Courses | 💼 LinkedIn | 📰 Newsletter
+📺 [YouTube](https://www.youtube.com/@DataWithBaraa)
+🎓 [Udemy Courses](https://bit.ly/4hH947P)
+💼 [LinkedIn](https://linkedin.com/in/ baraa-khatib-salkini)
+📰 [Newsletter]((http://bit.ly/3GiCVUE))
 
 🚀 Stay Tuned
 This is just the beginning — I’ll be updating this journal regularly with new challenges, code samples, and reflections from my journey.
