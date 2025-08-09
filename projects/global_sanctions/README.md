@@ -10,7 +10,7 @@ The end result will be a **multi-page Power BI report** and an **interactive das
 ---
 
 ## Objectives
-We aim to address the following themes:
+My aim to address the following themes:
 
 1. **The Why** – Why sanctions are imposed (objectives and triggers).  
 2. **The Who** – Which countries impose sanctions, and which are targeted.  
