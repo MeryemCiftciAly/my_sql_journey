@@ -31,11 +31,11 @@ But as his business grows, he starts running into problems:
 - Orders are tracked in a messy spreadsheet  
 - Calculating revenue by hand takes too long  
 
-To solve this, we imagine Jason moving his records into a structured **SQL database**.  
+To solve this, I imagine Jason moving his records into a structured **SQL database**.  
 
 ### The Workflow  
 
-In this exercise, we walk through that process step by step:  
+In this exercise, I walk through that process step by step:  
 
 1. **Create a bookstore table** that captures his full inventory.  
 2. **Insert customer orders** from his old spreadsheet.  
@@ -44,7 +44,7 @@ In this exercise, we walk through that process step by step:
 
 ---  
 
-This exercise is more than just SQL practice—it’s about showing how structured data can make life easier for small business owners like Jason.  
+This exercise is more than just SQL practice, t’s about showing how structured data can make life easier for small business owners like Jason.  
 
 ---
 
