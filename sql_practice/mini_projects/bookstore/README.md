@@ -2,7 +2,7 @@
 This exercise is based on a fictional bookstore owned by Jason (not a real person). The scenario was created to practice SQL basics, including:
 
 - The **bookstore dataset** was created manually to represent a real inventory (book ID, title, author, published date, price, genre, discount, ISBN).  
-- The **orders dataset** was adapted from a beginner SQL tutorial provided by **DataWithBaraa** taught by Baraa Khatib Salkink [datawithbaraa](https://www.youtube.com/watch?v=SSKVgrwhzus&t=7684s) 
+- The **orders dataset** was adapted from a beginner SQL tutorial provided by **DataWithBaraa** taught by Baraa Khatib Salkini [datawithbaraa](https://www.youtube.com/watch?v=SSKVgrwhzus&t=7684s) 
 
 The exercise demonstrates working with **DDL, DML, table updates, and basic data wrangling** in SQL.  
 It showcases how to structure data, update incomplete records, calculate derived values like total revenue, and maintain consistency across related tables.
