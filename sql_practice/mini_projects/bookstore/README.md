@@ -21,15 +21,30 @@ All scripts are stored under the `basics` folder in sequential order:
 
 ## Project Story
 
-Jason, the bookstore owner, kept a careful log of his inventory, including book IDs, titles, authors, published dates, prices, genres, discounts, and ISBN numbers. 
-He also had a **partial orders record** tracking customer purchases in a spreadsheet.
+## Jason’s Bookstore Story  
 
-The SQL workflow here achieves the following:
+Jason runs a small neighborhood bookstore. Every week, he updates his notebook with new titles, old classics, prices, and customer orders.  
 
-1. Transform his inventory log into a structured **bookstore table** in SQL.  
-2. Insert sample orders data and reconcile it with the bookstore inventory.  
-3. Calculate **unit price and total revenue**, taking discounts into account.  
-4. Build a **complete orders table** that can be used for reporting, analysis, or exporting to Excel.
+But as his business grows, he starts running into problems:  
+
+- Discounts aren’t always recorded consistently  
+- Orders are tracked in a messy spreadsheet  
+- Calculating revenue by hand takes too long  
+
+To solve this, we imagine Jason moving his records into a structured **SQL database**.  
+
+### The Workflow  
+
+In this exercise, we walk through that process step by step:  
+
+1. **Create a bookstore table** that captures his full inventory.  
+2. **Insert customer orders** from his old spreadsheet.  
+3. **Update the orders table** to include book IDs, discounts, unit prices, and total revenue.  
+4. **End up with a clean dataset** that Jason could use for reporting, analysis, or exporting into Excel.  
+
+---  
+
+This exercise is more than just SQL practice—it’s about showing how structured data can make life easier for small business owners like Jason.  
 
 ---
 
