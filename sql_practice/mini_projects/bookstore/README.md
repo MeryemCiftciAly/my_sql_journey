@@ -53,7 +53,7 @@ This exercise is more than just SQL practice, t’s about showing how structured
 
 You can see all SQL scripts running in a live Kaggle notebook:
 
-[View Kaggle Notebook](https://www.kaggle.com/meryemciftci)
+[View Kaggle Notebook]([https://www.kaggle.com/meryemciftci])(https://www.kaggle.com/code/meryemciftci/sql-basics-mini-project-ddl-dml)
 
 ---
 
