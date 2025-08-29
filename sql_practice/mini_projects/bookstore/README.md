@@ -13,7 +13,7 @@ All scripts are stored under the `basics` folder in sequential order:
 
 | Step | Description | File |
 |------|-------------|------|
-| 1a   | Create the bookstore table | [1a_DDL_bookstore.sql](basics/1a_DDL_bookstore.sql) |
+| 1a   | Create the bookstore table | [1a_DDL_bookstore.sql](https://github.com/MeryemCiftciAly/my_sql_journey/blob/main/sql_practice/%2000_basics/1a_ddl_bookstore.sql) |
 | 2a   | Insert sample bookstore data | [2a_inserting_bookstore.sql](basics/2a_inserting_bookstore.sql) |
 | 3a   | Update the orders table with unit price, total revenue, and book IDs | [3a_updating_bookstore_orders.sql](basics/3a_updating_bookstore_orders.sql) |
 
