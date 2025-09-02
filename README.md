@@ -28,7 +28,7 @@ It shows the value I can bring as a contributing member of a company's team, whi
 
 📌 Visit my website and vie my projects: [Nuuraqlyz](https://meryemciftcialy.github.io/nuuraqlyz_analytics/)
 
-**About Website:** This website serves as a further demonstration of my skills, as I built it myself using a combination of AI prompts, and my knowledge of HTML, CSS, and basic JavaScript.
+**About Website:** This website serves as a further demonstration of my skills, as **I built it myself** using a combination of AI prompts, and my knowledge of HTML, CSS, and basic JavaScript.
 
 ---
 
