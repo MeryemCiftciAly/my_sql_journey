@@ -30,19 +30,34 @@ It shows the value I can bring as a contributing member of a company's team, whi
 
 📌 Visit my website and vie my projects: [Nuuraqlyz](https://meryemciftcialy.github.io/nuuraqlyz_analytics/)
 
-### **About Website:** This website serves as a further demonstration of my skills, as I built it myself using a combination of AI prompts, and my knowledge of HTML, CSS, and basic JavaScript.
+**About Website:** This website serves as a further demonstration of my skills, as I built it myself using a combination of AI prompts, and my knowledge of HTML, CSS, and basic JavaScript.
 
 ---
 
-## Why This Matters
-There’s often little difference between someone learning SQL in university and someone doing so independently — except for **how the skills are applied**.
+### Why This Repository Matters
 
-In my case, I’ve chosen to learn through doing:  
-- Using industry tools  
-- Solving real problems  
-- Documenting the process publicly  
+While I have completed the **Google Data Analytics Professional Certificate**, I am a strong advocate for the power of self-learning. I believe that in data analytics, the true measure of skill lies not in a certificate, but in **how you apply your knowledge**. There's often little difference between someone with a university degree and someone who has learned independently, except for how they've proven their capabilities.
 
-This repo is updated regularly as I continue building stronger fluency and confidence in SQL.
+I've chosen to learn by doing, which means I:
+* Use **industry-standard tools** to solve real-world problems.
+* **Publicly document** my process to demonstrate my capabilities.
+
+This hands-on approach has been instrumental in building my fluency and confidence.
+
+---
+
+### Acknowledgments
+
+A special thanks to **Baraa Khatib-Salkini**. His videos, roadmaps, newsletters, and feedback have been an essential guide on my learning journey, providing the mentorship needed to grow my skills and career in data.
+
+---
+
+### Connect With Baraa
+
+* **YouTube:** [DataWithBaraa](https://www.youtube.com/@DataWithBaraa)
+* **Udemy Courses:** [Udemy Courses](https://bit.ly/4hH947P)
+* **LinkedIn:** [Baraa Khatib-Salkini](https://linkedin.com/in/baraa-khatib-salkini)
+* **Newsletter:** [Newsletter](https://bit.ly/BaraaNewsletter) SQL.
 
 ---
 
@@ -51,28 +66,4 @@ Explore my broader portfolio and other tools I use here:
 🌐 [Work Samples](https://meryemciftcialy.github.io/work_sample/)
 
 ---
-
-## 🙏 Acknowledgments
-A special thanks to **Baraa Khatib-Salkini** for creating the learning videos, roadmaps, newsletters, feedbacks that are all part of my learning and career development in data.
-
-All About Baraa → #NominateBaraa  
-
----
-
-## 📌 Connect With Baraa
-📺 [YouTube](https://www.youtube.com/@DataWithBaraa) | 🎓 [Udemy Courses](https://bit.ly/4hH947P)) | 💼 [LinkedIn](https://linkedin.com/in/baraa-khatib-salkini) | 📰 [Newsletter](https://bit.ly/BaraaNewsletter)
-
----
-
-## 🚀 Stay Tuned
-
-💡 I also did a **data warehouse project** out of curiosity to see what I would learn.  
-View the project here → [Data Warehouse Project](https://github.com/MeryemCiftciAly/data-warehouse-project-sql)
-
-## 📂 Repository Structure
-
-The layout below is the **current and planned organization** for this repository.  
-Some folders are in use now, while others are placeholders for future work as my SQL skillset grows into cloud engineering and automation.  
-This structure may evolve over time to better fit active projects and workflow.
-
 
