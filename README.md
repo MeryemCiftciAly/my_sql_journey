@@ -19,8 +19,6 @@ The purpose is not only to learn, but to **showcase practical, transferable skil
 
 ---
 
-## Freelance Initiative
-
 ## About Nuuraqlyz Analytics (pronounced: new-rack-lyz)
 **I’m actively seeking a full-time role, and in the meantime, I’ve established Nuuraqlyz Analytics as a way to practice and demonstrate my skills.** 
 Through these independent projects, I’m gaining real-world experience with data challenges, using tools like SQL, R, Python, Excel, Power BI, and Tableau.  
