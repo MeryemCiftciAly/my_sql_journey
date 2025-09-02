@@ -1,130 +1,106 @@
--- //////////////////////////////
--- Silver Layer DDL
-
--- This script defines the table structures for the Silver Layer of the data warehouse.
--- The Silver Layer represents the cleaned, transformed, and enriched data, serving as an
--- intermediate stage between raw ingestion (Bronze Layer) and the final analytical tables (Gold Layer).
--- The tables created here are structured to improve query performance and data integrity
--- before moving to the Gold Layer.
-
-- - Note:
--- This script is designed for MySQL, which does not support individual schemas.
--- The `USE data_warehouse;` statement specifies the database where the Silver Layer tables reside.
-
--- For more details on the overall data warehouse structure, refer to the README file.
--- ///////////////////////////////
-
-USE datawarehouse; 
-
--- /////////////////////////////////////////
--- Creating Silver CRM Source Table structure - silver_crm_cst_inf0
--- /////////////////////////////////////////
-
-CREATE TABLE IF NOT EXISTS datawarehouse.silver_crm_cst_inf0 (
-cust_id INT,
-cust_key VARCHAR(50),
-cust_firstname VARCHAR(50),
-cust_lastname VARCHAR(50),
-cst_marital_status VARCHAR(50),
-cst_gndr VARCHAR(50),
-cst_create_date DATE,
-meta_start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-meta_end_date TIMESTAMP DEFAULT NULL, 
-meta_load_start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-meta_load_end_time TIMESTAMP DEFAULT NULL,
-meta_load_status VARCHAR(20), 
-meta_error_message TEXT
-   );
-   
--- /////////////////////////////////////////
--- Creating silver CRM Source Table structure - silver_crm_sales_details
--- /////////////////////////////////////////
-CREATE TABLE datawarehouse.silver_crm_sales_details (
-sls_ord_num VARCHAR(50),
-sls_prd_key VARCHAR(50),
-sls_cust_id VARCHAR(50),
-sls_order_dt DATE,
-sls_ship_dt DATE,
-sls_due_dt DATE,
-sls_quantity INT,
-sls_sales INT,
-sls_price INT,
-meta_start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-meta_end_date TIMESTAMP DEFAULT NULL, 
-meta_load_start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-meta_load_end_time TIMESTAMP DEFAULT NULL,
-meta_load_status VARCHAR(20), 
-meta_error_message TEXT 
-);
 
 
--- /////////////////////////////////////////
--- Creating silver CRM Source Table structure - silver_crm_prd_info
--- /////////////////////////////////////////
+USE datawarehouse;
 
-CREATE TABLE IF NOT EXISTS datawarehouse.silver_crm_prd_info (
-prd_id INT,
-cat_id VARCHAR(50),
-prd_key VARCHAR(50),
-prd_nm VARCHAR(50),
-prd_cost INT,
-prd_line VARCHAR(50),
-prd_start_dt DATE,
-prd_end_dt DATE,
-meta_start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-meta_end_date TIMESTAMP DEFAULT NULL, 
-meta_load_start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-meta_load_end_time TIMESTAMP DEFAULT NULL,
-meta_load_status VARCHAR(20), 
-meta_error_message TEXT 
-);
+-- Checking if silver layer has product number with space
+SELECT prd_nm
+FROM datawarehouse.silver_crm_prd_info
+WHERE prd_nm != TRIM(prd_nm);
 
+-- Checking for duplicate data if there are duplicate customer IDs
+SELECT cust_id,
+COUNT(*)
+FROM datawarehouse.silver_crm_cst_inf0
+GROUP BY cust_id
+HAVING COUNT(*) > 1;
 
-SELECT * FROM datawarehouse.silver_crm_prd_info;
+-- Checking for null or negative numbers
+SELECT prd_cost
+FROM datawarehouse.silver_crm_prd_info
+WHERE prd_cost < 0 OR prd_cost IS NULL;
 
--- **************************************************
--- Creating silver ERP Source Table structure - silver_erp_cust_az12
--- **************************************************
+-- ======================================================================================
+-- Checks for invalid start date structure
+-- The date checks id the start date is greater than the end date
+-- The date checks if the sales order date is greater than the ship or delivery date
+-- The date checks if the order date is in the future or in the past
+-- =======================================================================================
 
-CREATE TABLE IF NOT EXISTS datawarehouse.silver_erp_cust_az12 (
-cid VARCHAR (50),
-bdate DATE,
-gen VARCHAR(50),
-meta_start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-meta_end_date TIMESTAMP DEFAULT NULL, 
-meta_load_start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-meta_load_end_time TIMESTAMP DEFAULT NULL,
-meta_load_status VARCHAR(20), 
-meta_error_message TEXT
-);
+SELECT * FROM datawarehouse.silver_crm_prd_info
+WHERE prd_start_dt > prd_end_dt;
 
--- **************************************************
--- Creating silver ERP Source Table structure - silver_erp_LOC_A101
--- **************************************************
+SELECT * FROM datawarehouse.silver_crm_sales_details
+WHERE sls_order_dt > sls_ship_dt OR sls_order_dt > sls_due_dt;
 
-CREATE TABLE datawarehouse.silver_erp_loc_a101 (
-cid VARCHAR (50),
-cntry VARCHAR (50),
-meta_start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-meta_end_date TIMESTAMP DEFAULT NULL, 
-meta_load_start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-meta_load_end_time TIMESTAMP DEFAULT NULL,
-meta_load_status VARCHAR(20), 
-meta_error_message TEXT
-);
+SELECT
+NULLIF(sls_order_dt, 0) sls_order_dt
+FROM datawarehouse.silver_crm_sales_details
+WHERE sls_order_dt <= 0
+OR LENGTH(sls_order_dt)!= 8
+OR sls_order_dt > 20500101
+OR sls_order_dt > 19000101;
 
--- **************************************************
--- Creating silver ERP Source Table structure - silver_erp_px_cat_g1v2
--- **************************************************
-CREATE TABLE datawarehouse.silver_erp_px_cat_g1v2 (
-id VARCHAR (50),
-cat VARCHAR (50),
-subcat VARCHAR (50),
-maintenance VARCHAR (3),
-meta_start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-meta_end_date TIMESTAMP DEFAULT NULL, 
-meta_load_start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-meta_load_end_time TIMESTAMP DEFAULT NULL,
-meta_load_status VARCHAR(20), 
-meta_error_message TEXT
-);
+-- Checking monetary value structure
+SELECT DISTINCT
+sls_sales,
+sls_quantity,
+sls_price
+FROM datawarehouse.silver_crm_sales_details
+WHERE sls_sales != sls_quantity * sls_price
+OR sls_sales IS NULL OR sls_quantity IS NULL OR sls_price IS NULL
+OR sls_sales <= 0 OR sls_quantity <= 0 OR sls_price <= 0
+ORDER BY sls_sales, sls_quantity, sls_price;
+
+-- Handling low cardinality data
+SELECT DISTINCT
+gen,
+CASE WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN ('Female')
+     WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN ('Male')
+ELSE 'n/a'
+END gen
+FROM datawarehouse.bronze_erp_cust_az12;
+
+SELECT 
+CASE WHEN TRIM(cntry) = 'DE' THEN 'GERMANY'
+     WHEN TRIM(cntry) IN ('US', 'USA') THEN  'United States'
+     WHEN TRIM(cntry) = '' OR cntry IS NULL THEN 'n/a'
+ELSE TRIM(cntry)
+END AS cntry
+FROM datawarehouse.bronze_erp_cust_az212;
+
+-- Separating product ID
+SELECT
+CASE WHEN cid LIKE 'NAS%' THEN SUBSTRING(cid, 4, LENGTH(cid))
+     ELSE cid
+END cid,
+bdate,
+gen
+FROM datawarehouse.bronze_erp_cust_az12
+WHERE bdate < '1920-01-01' OR bdate > NOW();
+
+-- Checking the prouct key length
+SELECT prd_key, LENGTH(prd_key)
+FROM datawarehouse.silver_crm_prd_info
+ORDER BY LENGTH(prd_key) DESC
+LIMIT 10;
+
+-- Checking the ID between the silver and bronze layer
+SELECT
+id, 
+cat, 
+subcat, 
+maintenance
+FROM datawarehouse.bronze_erp_px_cat_g1v2 WHERE id NOT IN 
+(SELECT cat_id FROM datawarehouse.silver_crm_prd_info);
+-- returns one ID that is not in the silver layer
+
+-- Fixing overlapping date in the dataset
+SELECT
+prd_id,
+prd_key,
+prd_nm,
+prd_start_dt,
+prd_end_dt,
+LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt) - INTERVAL 1 DAY AS prd_end_dt
+FROM datawarehouse.bronze_crm_prd_info
+WHERE prd_key IN ('AC-HE-HL-U509-R', 'AC-HE-HL-U509');
