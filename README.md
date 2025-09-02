@@ -22,13 +22,15 @@ The purpose is not only to learn, but to **showcase practical, transferable skil
 ## Freelance Initiative
 
 ## About Nuuraqlyz Analytics (pronounced: new-rack-lyz)
-I’m actively seeking a full-time role, and in the meantime, I’ve established Nuuraqlyz Analytics as a way to practice and demonstrate my skills. 
+**I’m actively seeking a full-time role, and in the meantime, I’ve established Nuuraqlyz Analytics as a way to practice and demonstrate my skills.** 
 Through these independent projects, I’m gaining real-world experience with data challenges, using tools like SQL, R, Python, Excel, Power BI, and Tableau.  
 
 **This work demonstrates my ability to deliver results in a professional, results-oriented environment.** 
 It shows the value I can bring as a contributing member of a company's team, while also providing hands-on assistance to individuals and SMEs who are collaborating on data-driven decisions to achieve their objectives.
 
 📌 Visit my website and vie my projects: [Nuuraqlyz](https://meryemciftcialy.github.io/nuuraqlyz_analytics/)
+
+**About Website:** This website serves as a further demonstration of my skills, as I built it myself using a combination of AI prompts, and my knowledge of HTML, CSS, and basic JavaScript.
 
 ---
 
@@ -44,9 +46,9 @@ This repo is updated regularly as I continue building stronger fluency and confi
 
 ---
 
-## 🧭 See What I'm up to
+## 🧭 See what I'm up to besides data analytics
 Explore my broader portfolio and other tools I use here:  
-🌐 [My Data Work Samples (Power BI, SQL, Tableau, Excel)](https://meryemciftcialy.github.io/work_sample/)
+🌐 [Work Samples](https://meryemciftcialy.github.io/work_sample/)
 
 ---
 
