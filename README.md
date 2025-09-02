@@ -21,15 +21,12 @@ The purpose is not only to learn, but to **showcase practical, transferable skil
 
 ## Freelance Initiative
 
-## Nuuraqlyz Analytics (pronounced: new-rack-lyz)
-Alongside my full-time career, I’ve started building a **freelance practice** to work one-on-one with **individuals, small businesses, entrepreneurs, and startups**.  
+## About Nuuraqlyz Analytics (pronounced: new-rack-lyz)
+I’m actively seeking a full-time role, and in the meantime, I’ve established Nuuraqlyz Analytics as a way to practice and demonstrate my skills. 
+Through these independent projects, I’m gaining real-world experience with data challenges, using tools like SQL, R, Python, Excel, Power BI, and Tableau.  
 
-These are the kinds of clients who often face unique data challenges — challenges that I can help solve using my growing skill set in SQL, Python, and data analytics.  
-
-Freelancing gives me the opportunity to:
-- Apply my skills in real-world, client-focused scenarios  
-- Solve problems that I might not encounter in a traditional role  
-- Deliver value directly to people building their own ventures  
+**This work demonstrates my ability to deliver results in a professional, results-oriented environment.** 
+It shows the value I can bring as a contributing member of a company's team, while also providing hands-on assistance to individuals and SMEs who are collaborating on data-driven decisions to achieve their objectives.
 
 📌 Learn more about my freelance work here: [Work With Me](https://meryemciftcialy.github.io/work_sample/)
 
