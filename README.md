@@ -28,7 +28,7 @@ Through these independent projects, I’m gaining real-world experience with dat
 **This work demonstrates my ability to deliver results in a professional, results-oriented environment.** 
 It shows the value I can bring as a contributing member of a company's team, while also providing hands-on assistance to individuals and SMEs who are collaborating on data-driven decisions to achieve their objectives.
 
-📌 Learn more about my freelance work here: [Work With Me](https://meryemciftcialy.github.io/work_sample/)
+📌 Visit my website and vie my projects: [Nuuraqlyz](https://meryemciftcialy.github.io/nuuraqlyz_analytics/)
 
 ---
 
