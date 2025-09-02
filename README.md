@@ -48,8 +48,6 @@ This hands-on approach has been instrumental in building my fluency and confiden
 
 A special thanks to **Baraa Khatib-Salkini**. His videos, roadmaps, newsletters, and feedback have been an essential guide on my learning journey, providing the mentorship needed to grow my skills and career in data.
 
----
-
 ### Connect With Baraa
 
 * **YouTube:** [DataWithBaraa](https://www.youtube.com/@DataWithBaraa)
