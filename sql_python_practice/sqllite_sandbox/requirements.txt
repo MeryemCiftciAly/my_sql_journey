@@ -1,0 +1,10 @@
+# Libraries used (or planned to be used) in this Python + SQL sandbox
+
+# SQLite3 is built into Python, no need to install separately
+# But if I use other libraries for practice, I’ll list them here:
+
+pandas       # For working with tabular data
+openpyxl     # For Excel file reading/writing
+sqlalchemy   # For higher-level SQL handling (optional practice)
+
+
