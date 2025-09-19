@@ -56,9 +56,7 @@ My aim to address the following themes:
 
 ## References & Attribution
 - Dataset provided by **Drexel University** and the **Austrian Institute of Economic Research**.  
-- SQL scripting guidance inspired by **DataWithBaraa**:  
-  [https://www.youtube.com/@DataWithBaraa](https://www.youtube.com/@DataWithBaraa)  
-
+  
 > All public-facing outputs will credit the data providers.
 
 ---
