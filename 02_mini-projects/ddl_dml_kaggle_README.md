@@ -16,7 +16,7 @@ All scripts are stored under the `basics` folder in sequential order:
 | Step | Description | File |
 |------|-------------|------|
 | 1a   | Create the bookstore table |  [1a_DDL_bookstore.sql](https://github.com/MeryemCiftciAly/my_sql_journey/blob/34917784f0dec8fe7d3fc86f114102659d0973ad/01_sql_practice/%2000_basics/01_ddl_schema_definition/table_bookstore.sql) |
-| 2a   | Insert sample bookstore data | [2a_inserting_bookstore.sql] (https://github.com/MeryemCiftciAly/my_sql_journey/blob/1eb0f3d33ce5520e70051ac95475da812ff999d0/01_sql_practice/%2000_basics/02_dml_data_management/data_insert_bookstore.sql)|
+| 2a   | Insert sample bookstore data |  [2a_inserting_bookstore.sql](https://github.com/MeryemCiftciAly/my_sql_journey/blob/1eb0f3d33ce5520e70051ac95475da812ff999d0/01_sql_practice/%2000_basics/02_dml_data_management/data_insert_bookstore.sql)|
 ---
 
 ## Project Story
