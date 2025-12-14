@@ -40,10 +40,6 @@ My aim to address the following themes:
    - **Page 2:** Effectiveness analysis by type, country, and objective.  
    - **Page 3:** Timeline analysis and long-term impact.
 
-5. **Dashboard Creation**  
-   - Pin essential visuals for quick, high-level insights.  
-   - Support KPIs with drill-through visuals for context.
-
 ---
 
 ## Deliverables
