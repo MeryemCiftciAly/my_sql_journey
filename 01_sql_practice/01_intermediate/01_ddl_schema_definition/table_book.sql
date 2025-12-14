@@ -1,7 +1,7 @@
 
 
 CREATE TABLE books (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     author TEXT,
     title TEXT,
     words INTEGER);
