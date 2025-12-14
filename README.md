@@ -21,7 +21,7 @@ The purpose is not only to learn, but to **showcase practical, transferable skil
 
 ## About Nuuraqlyz Analytics (pronounced: new-rack-lyz)
 **I’m actively seeking a full-time role, and in the meantime, I’ve established Nuuraqlyz Analytics as a way to practice and demonstrate my skills.** 
-Through these independent projects, I’m gaining real-world experience with data challenges, using tools like SQL, R, Python, Excel, Power BI, and Tableau.  
+Through these independent projects, I’m gaining real-world experience with data challenges, using tools like SQL, Python, Excel, Power BI, and Tableau.  
 
 **This work demonstrates my ability to deliver results in a professional, results-oriented environment.** 
 It shows the value I can bring as a contributing member of a company's team, while also providing hands-on assistance to individuals and SMEs who are collaborating on data-driven decisions to achieve their objectives.
@@ -51,10 +51,6 @@ A special thanks to **Baraa Khatib-Salkini**. His videos, roadmaps, newsletters,
 ### Connect With Baraa
 
 * **YouTube:** [DataWithBaraa](https://www.youtube.com/@DataWithBaraa)
-* **Udemy Courses:** [Udemy Courses](https://bit.ly/4hH947P)
-* **LinkedIn:** [Baraa Khatib-Salkini](https://linkedin.com/in/baraa-khatib-salkini)
-* **Newsletter:** [Newsletter](https://bit.ly/BaraaNewsletter) SQL.
-
 ---
 
 ## 🧭 See what I'm up to besides data analytics
