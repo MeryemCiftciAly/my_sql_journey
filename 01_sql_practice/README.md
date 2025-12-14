@@ -4,7 +4,7 @@
 
 This repository serves as a transparent, public portfolio **documenting** my ongoing learning and skill development in **PostgreSQL**. While I have successfully obtained the Google Data Analytics Professional Certificate, my dedication to continuous, hands-on practice ensures that my skills remain current and robust.
 
-This work demonstrates my commitment to **structured problem-solving, data integrity, and pipeline integration**—the core proficiencies of a successful Data Analyst.
+This work demonstrates my commitment to **structured problem-solving, data integrity, and pipeline integration**, the core proficiencies of a successful Data Analyst.
 
 ### **Repository Structure and Progression**
 
