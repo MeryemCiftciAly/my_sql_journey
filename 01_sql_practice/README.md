@@ -8,7 +8,7 @@ This work demonstrates my commitment to **structured problem-solving, data integ
 
 ### **Repository Structure and Progression**
 
-My learning methodology combines formal instruction with self-directed challenges. I follow structured sources (like Khan Academy) and supplement with practical tutorials from selected educators (such as Baraa Katib Salkini). Challenges derived from these sources are logged here, followed by a mini challenge and a full project using real-world datasets.
+My learning methodology combines formal instruction with self-directed challenges. I follow structured sources (like Khan Academy) and supplement with practical tutorials from selected educators (such as Baraa Khatib-Salkini). Challenges derived from these sources are logged here, followed by a mini challenge and a full project using real-world datasets.
 
 The repository is organized into progressive difficulty tiers to clearly illustrate skill advancement:
 
