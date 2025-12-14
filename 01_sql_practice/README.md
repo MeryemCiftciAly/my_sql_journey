@@ -1,12 +1,12 @@
-## 📊 01_SQL_Practice: My Structured Learning Path in PostgreSQL
+## 01_SQL_Practice: My Structured Learning Path in PostgreSQL
 
-### **📌 Purpose & Philosophy**
+**Purpose**
 
 This repository serves as a transparent, public portfolio **documenting** my ongoing learning and skill development in **PostgreSQL**. While I have successfully obtained the Google Data Analytics Professional Certificate, my dedication to continuous, hands-on practice ensures that my skills remain current and robust.
 
 This work demonstrates my commitment to **structured problem-solving, data integrity, and pipeline integration**—the core proficiencies of a successful Data Analyst.
 
-### **🗺️ Repository Structure and Progression**
+### **Repository Structure and Progression**
 
 My learning methodology combines formal instruction with self-directed challenges. I follow structured sources (like Khan Academy) and supplement with practical tutorials from selected educators (such as Baraa Katib Salkini). Challenges derived from these sources are logged here, followed by a mini challenge and a full project using real-world datasets.
 
@@ -26,7 +26,7 @@ To ensure clarity and make the learning path traceable, all query files follow a
 >
 > *Example:* `02_basic_aggregation_1.sql`
 
-### **🛠️ Key Skills Demonstrated**
+### **Key Skills Demonstrated**
 
 The code and projects within this repository actively demonstrate the following technical proficiencies:
 
@@ -35,7 +35,7 @@ The code and projects within this repository actively demonstrate the following 
 * **Data Adaptability & Troubleshooting:** The ability to resolve schema and constraint issues when migrating between SQL dialects (MySQL → PostgreSQL). This shows an ability to **diagnose and adapt** to real-world data issues.
 * **Relational Database Skills:** Actively learning to manage data across multiple tables using various **Join** types.
 
-### **🔗 Project Showcase & Deliverables**
+### **Project Showcase*
 
 To provide an interactive experience and clearly showcase the final results of the coding and queries, projects utilize analysis notebooks:
 
