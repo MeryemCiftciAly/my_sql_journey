@@ -35,7 +35,7 @@ The code and projects within this repository actively demonstrate the following 
 * **Data Adaptability & Troubleshooting:** The ability to resolve schema and constraint issues when migrating between SQL dialects (MySQL → PostgreSQL). This shows an ability to **diagnose and adapt** to real-world data issues.
 * **Relational Database Skills:** Actively learning to manage data across multiple tables using various **Join** types.
 
-### **Project Showcase*
+### **Project Showcase**
 
 To provide an interactive experience and clearly showcase the final results of the coding and queries, projects utilize analysis notebooks:
 
