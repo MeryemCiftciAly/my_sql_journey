@@ -83,7 +83,7 @@ def check_table():
 # -------------------------------
 
 if __name__ == '__main__':
-    print("💫" * 10)
+    print("*" * 10)
     print("\nStarting modular SQL + Python workflow\n")
 
     # Step 1: Create table
