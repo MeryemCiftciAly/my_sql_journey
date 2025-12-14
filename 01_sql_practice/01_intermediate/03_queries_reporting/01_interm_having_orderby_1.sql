@@ -10,6 +10,7 @@ HAVING
   AVG(words) > 150000
 --=====================================================================================--
 --Find the top 3 authors by book count.
+  
 SELECT 
   author, 
   COUNT(id) AS total_books
