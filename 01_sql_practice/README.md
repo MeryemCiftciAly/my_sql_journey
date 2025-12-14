@@ -1,27 +1,43 @@
-# 01_sql_practice
+## 📊 01_SQL_Practice: My Structured Learning Path in PostgreSQL
 
-This repository contains SQL practice exercises using a variety of datasets from sources such as [freeCodeCamp](https://www.freecodecamp.org/) and [Data with Baraa](https://datawithbaraa.com/).  
+### **📌 Purpose & Philosophy**
 
-## Purpose
+This repository serves as a transparent, public portfolio **documenting** my ongoing learning and skill development in **PostgreSQL**. While I have successfully obtained the Google Data Analytics Professional Certificate, my dedication to continuous, hands-on practice ensures that my skills remain current and robust.
 
-- This repository is for **personal practice** and skill-building in SQL and PostgreSQL.  
-- Exercises focus on real-world scenarios such as creating tables, inserting data, handling constraints, and performing joins and aggregations.  
-- The work shown here demonstrates **problem-solving, adaptation, and troubleshooting skills**, especially when migrating datasets from MySQL to PostgreSQL.
+This work demonstrates my commitment to **structured problem-solving, data integrity, and pipeline integration**—the core proficiencies of a successful Data Analyst.
 
-## Customers Dataset
+### **🗺️ Repository Structure and Progression**
 
-- **Source:** freeCodeCamp tutorial dataset.  
-- **Original Setup:** Designed for MySQL, including syntax and data types not directly compatible with PostgreSQL.  
-- **Current Setup:** Using PostgreSQL, which caused issues due to differences in syntax, data types, and foreign key constraints.  
-- **Issue Encountered:** Foreign key constraints on `salesrepemployeenumber` prevented inserts because the referenced `employees` table did not contain matching keys.  
-- **Action Taken:**  
-  - Dropped the foreign key constraint temporarily.  
-  - Created a **custom dataset** for the `customers` table with valid or `NULL` `salesrepemployeenumber` values to allow continued practice.  
-- **Reasoning:** Enables ongoing practice with joins, queries, and other SQL operations without being blocked by dataset inconsistencies.  
+My learning methodology combines formal instruction with self-directed challenges. I follow structured sources (like Khan Academy) and supplement with practical tutorials from selected educators (such as Baraa Katib Salkini). Challenges derived from these sources are logged here, followed by a mini challenge and a full project using real-world datasets.
 
-## Notes
+The repository is organized into progressive difficulty tiers to clearly illustrate skill advancement:
 
-- This work is **not production-ready**; it is intended purely for learning and practice.  
-- Highlights skills in **data cleaning, dataset adaptation, troubleshooting SQL errors**, and working with relational databases.  
-- Future updates may include additional datasets, more complex queries, and integration with other tables for advanced practice.
+| Section | Focus Area | Example Concepts Covered |
+| :--- | :--- | :--- |
+| `/Basic` | Foundational Querying | `SELECT`, `FROM`, `WHERE`, simple `GROUP BY` and constraints. |
+| `/Intermediate` | Logic, Grouping, & Data Linking | `GROUP BY`, **`HAVING`**, `CASE` statements, and all types of **Joins**. |
+| `/Advanced` | Efficiency and Large-Scale Solutions | Window Functions, Common Table Expressions (CTEs), and Indexing. |
 
+#### **File Naming Convention (Clarity and Traceability)**
+
+To ensure clarity and make the learning path traceable, all query files follow a standard structure:
+
+> **`[Order]_[Complexity]_[Concept]_[Version].sql`**
+>
+> *Example:* `02_basic_aggregation_1.sql`
+
+### **🛠️ Key Skills Demonstrated**
+
+The code and projects within this repository actively demonstrate the following technical proficiencies:
+
+* **Continuous Learning:** A commitment to moving beyond certificate completion through dedicated, structured practice.
+* **Complex Querying & Aggregation:** Expertise in filtering aggregated data (`HAVING`) and handling conditional logic (`CASE`).
+* **Data Adaptability & Troubleshooting:** The ability to resolve schema and constraint issues when migrating between SQL dialects (MySQL → PostgreSQL). This shows an ability to **diagnose and adapt** to real-world data issues.
+* **Relational Database Skills:** Actively learning to manage data across multiple tables using various **Join** types.
+
+### **🔗 Project Showcase & Deliverables**
+
+To provide an interactive experience and clearly showcase the final results of the coding and queries, projects utilize analysis notebooks:
+
+* **Kaggle** and **Google Colab Notebooks:** These are used to run complex SQL queries, process the results (often using Python), and present findings through clear narratives and visualizations.
+* **End-to-End Workflow:** This process demonstrates the full data analyst workflow, from data ingestion (SQL) to final business communication, and the ability to integrate SQL results into tools like **Python**, **Tableau**, or **Power BI**.
