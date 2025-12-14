@@ -8,8 +8,10 @@ GROUP BY
   author
 HAVING
   AVG(words) > 150000
+  
 --=====================================================================================--
---Find the top 3 authors by book count.
+
+  --Find the top 3 authors by book count.
   
 SELECT 
   author, 
