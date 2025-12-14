@@ -1,4 +1,4 @@
-## 01_SQL_Practice: My Structured Learning Path in PostgreSQL
+## 01_SQL_Practice: My Structured Learning Path in SQL
 
 **Purpose**
 
