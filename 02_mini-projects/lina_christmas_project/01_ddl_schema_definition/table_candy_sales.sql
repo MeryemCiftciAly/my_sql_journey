@@ -1,3 +1,5 @@
+-- Details about the gifts purchased and their costs.
+
 CREATE TABLE candy_sales (
 	sale_id INTEGER PRIMARY KEY,
 	flavor TEXT NOT NULL,
