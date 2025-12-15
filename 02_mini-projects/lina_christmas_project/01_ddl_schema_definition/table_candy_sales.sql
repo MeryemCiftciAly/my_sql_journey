@@ -1,4 +1,4 @@
--- Details about the gifts purchased and their costs.
+-- Tracks sales performance across neighborhoods and flavors.
 
 CREATE TABLE candy_sales (
 	sale_id INTEGER PRIMARY KEY,
