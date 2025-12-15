@@ -1,3 +1,5 @@
+-- Details about the gifts purchased and their costs.
+
 CREATE TABLE giftlist (
     gift_id INTEGER PRIMARY KEY,
     relative_name TEXT NOT NULL,
