@@ -35,3 +35,7 @@ This project queries includes:
 ## 📜 The Story of Lina's Christmas Project
 
 [Link to the full story to be added (TBA)]
+
+## Kaggle Interactive Notebook
+
+[Link to be added (TBA)]
