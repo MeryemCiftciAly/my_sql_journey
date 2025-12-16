@@ -12,7 +12,7 @@ After further thought and feedback the question was clarified.
 SELECT DISTINCT
 	 g.relative_name,
 	 g.gift_purchased, 
- 	s.delivery_status  
+ 	 s.delivery_status  
 FROM 
 	 shipments s
 JOIN gift_list g ON s.gift_id = g.gift_id 
