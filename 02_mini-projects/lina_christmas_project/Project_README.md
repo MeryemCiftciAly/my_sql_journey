@@ -13,7 +13,7 @@ The goal is to demonstrate end-to-end data skills, from data modeling and SQL qu
 | **SQLite** | Local, file-based database engine (no server installation required). |
 | **DBeaver** | Professional, cross-platform SQL client used for development and testing. |
 | **Python** (via Kaggle) | Integrating the final SQL queries for ETL (Extract, Transform, Load) and interactivity. |
-| **Canva / HTML** | Storybook creation and visual engagement. |
+| **Canva / HTML** | Story creation and visual engagement. |
 
 ## Data Model & Schema
 
