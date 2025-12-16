@@ -29,7 +29,7 @@ This project queries includes:
 * Aggregate functions (`SUM()`, `AVG()`, `COUNT()`)
 * Data grouping (`GROUP BY`) and ordering (`ORDER BY`)
 * Data filtering (`WHERE`)
-* **Complex JOINs** (`INNER JOIN` for cross-table insights).
+* **Complex JOINs** (`INNER / LEFT JOIN` for cross-table insights).
 * **Intermediate Logic** using Common Table Expressions (CTEs) and `CASE` statements to perform a full budget analysis.
 
 ## 📜 The Story of Lina's Christmas Project
