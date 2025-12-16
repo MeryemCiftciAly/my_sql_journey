@@ -25,7 +25,7 @@ The dataset consists of three tables derived from the story:
 
 ## Key SQL Techniques Demonstrated
 
-This project successfully tackles queries requiring:
+This project queries includes:
 * Aggregate functions (`SUM()`, `AVG()`, `COUNT()`)
 * Data grouping (`GROUP BY`) and ordering (`ORDER BY`)
 * Data filtering (`WHERE`)
