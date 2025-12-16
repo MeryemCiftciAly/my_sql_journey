@@ -1,4 +1,4 @@
-## Happy Holidays## ##🎄 Lina's Christmas Project: A SQL & Python Data Analysis Portfolio Piece 🎁
+## Happy Holidays ## ## 🎄 Lina's Christmas Project: A SQL & Python Data Analysis Portfolio Piece 🎁
 
 ## Project Overview: Story Meets Data Analysis
 
