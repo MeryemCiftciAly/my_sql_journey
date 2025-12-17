@@ -38,4 +38,4 @@ This project queries includes:
 
 ## Kaggle Interactive Notebook
 
-[Link to be added (TBA)]
+[Kaggle Interactive)](https://www.kaggle.com/code/meryemciftci/the-christmas-dinner-q-a-interactive-sql-analysis)
