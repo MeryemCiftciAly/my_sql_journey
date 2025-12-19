@@ -34,7 +34,7 @@ This project queries includes:
 
 ## 📜 The Story of Lina's Christmas Project
 
-[Link to the full story to be added (TBA)]
+[Read Lina's Story](https://github.com/MeryemCiftciAly/my_sql_journey/blob/c79d2f056bc36dcd09f6722a84b5d82076468bd8/02_mini-projects/lina_christmas_project/documentation/Story%20-%20Lina's%20Christmas%20Project.pdf)
 
 ## Kaggle Interactive Notebook
 
