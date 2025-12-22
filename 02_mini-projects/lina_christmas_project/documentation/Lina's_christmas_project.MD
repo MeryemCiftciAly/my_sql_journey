@@ -27,7 +27,7 @@ This project is an experiment in **Data Storytelling**. It demonstrates how anal
 
 * **Strategic Planning:** Negotiating "Christmas Pacts" to eliminate overhead and maximize gift-giving revenue.
 * **Operational Tracking:** Managing candy production, neighborhood sales, and shipping logistics.
-* **Data-Driven Answers:** Using SQL and Data Viz to answer the questions stakeholders (family) ask at the end of a project.
+* **Data-Driven Answers:** Using SQL to answer the questions stakeholders (family) ask at the end of a project.
 
 ## **Resources & Mentors**
 This project was built using skills gained from the incredible free resources provided by the data community. If you are on your own learning journey, I highly recommend:
