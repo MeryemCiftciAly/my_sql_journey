@@ -15,7 +15,7 @@ If you are here to read the narrative and see the Disney-style illustrations, op
 
 ---
 
-### **2. The Analytics Suite (Technical Experience)**
+### **2. The Analytics (Technical Experience)**
 If you want to dive into the "behind-the-scenes" data, explore the SQL queries, and interact with the results that answered the family's dinner-table questions, head over to Kaggle.
 
  **[Click Here to Explore the Interactive Analytics on Kaggle](https://www.kaggle.com/code/meryemciftci/the-christmas-dinner-q-a-interactive-sql-analysis)**
