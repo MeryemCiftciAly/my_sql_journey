@@ -23,7 +23,7 @@ If you want to dive into the "behind-the-scenes" data, explore the SQL queries, 
 ---
 
 ## **Project Overview**
-This project is an experiment in **Data Storytelling**. It demonstrates how analytical thinking can be applied to real-world goals:
+This project is an experiment in **Data Storytelling**. It demonstrates how analytical thinking can be applied to real-world goals and with some creativity:
 
 * **Strategic Planning:** Negotiating "Christmas Pacts" to eliminate overhead and maximize gift-giving revenue.
 * **Operational Tracking:** Managing candy production, neighborhood sales, and shipping logistics.
