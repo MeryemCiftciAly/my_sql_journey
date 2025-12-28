@@ -9,7 +9,7 @@ How do poverty and unemployment show up together in the data? Are they always co
 
 ---
 
-## Data Sources and What to Keep in Mind
+## Data Sources and What I Had to Keep in Mind
 
 The data used in this project comes from publicly available sources that track poverty and unemployment over time. These datasets are already calculated and structured by the original data providers, which means some decisions are baked into the data before any analysis begins.
 
@@ -19,7 +19,7 @@ A few important things to note:
 - The calculation methods are predefined and cannot be adjusted
 - Comparisons should be interpreted carefully due to differences in how the data is reported
 
-These limitations don’t prevent analysis, but they do shape how the results should be understood.
+The limitations of the data do not prevent analysis, but they do require caution in how the results are interpreted and understood.
 
 ---
 
@@ -39,11 +39,11 @@ This narrower scope supports deeper exploration without losing sight of the broa
 The original datasets were not immediately ready for analysis or visualization. A significant portion of the work involved making the data easier to understand and work with.
 
 Key preparation steps included:
-- Translating encoded column names into human-readable labels
-- Extracting year and category information from column names
-- Creating lookup tables to document what each attribute represents
-- Designing a data model to organize the data logically
-- Mapping how different tables relate to each other using an ERD (Entity Relationship Diagram)
+- Translating encoded column names into human-readable labels - research and source
+- Extracting year and category information from column names - Excel Power Query
+- Creating lookup tables to document what each attribute represents - Excel lookup functions
+- Designing a data model to organize the data logically - Excel and draw.io
+- Mapping how different tables relate to each other using an ERD (Entity Relationship Diagram) - Excel and draw.io
 
 Supporting documentation, including the ERD and data notes, is included in this repository.
 
@@ -71,11 +71,23 @@ This project is exploratory rather than prescriptive. It looks at patterns in th
 Some of the ideas explored include:
 - Whether unemployment appears alongside higher poverty levels
 - Whether poverty exists even among employed populations
-- How these indicators move together — or independently — across different periods
+- How these indicators move together or independently or across different periods
 
 The focus is on observation and interpretation, not on making strong causal claims.
 
 ---
 
-## Repository Structure
+## Next Steps
+Visualizing the date in Tableau
+
+## Tools Used
+
+- SQL (PostgreSQL-compatible)
+- Microsoft Excel
+- Tableau
+- Draw.io
+
+---
+
+This project was created as a self-directed exercise to practice data preparation, SQL analysis, and visualization-ready data modeling, while exploring a topic that is personally and professionally meaningful.
 
