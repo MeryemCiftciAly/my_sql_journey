@@ -7,6 +7,3 @@ The dashboard visualizes key patterns and relationships between poverty and unem
 **Tableau Dashboard Link:**  
 [To be added]
 
-Notes:
-- The dashboard complements the SQL-based analysis in this repository.
-- Visualizations are designed for both technical and non-technical audiences.
