@@ -92,4 +92,4 @@ All changes in the Silver layer are driven by:
 - Project scope (New York counties only)
 - The need for clean, analyzable county-level data
 
-The Bronze layer is preserved as a faithful copy of the original dataset.
+The Bronze layer is preserved and remained unchanged as the original dataset.
