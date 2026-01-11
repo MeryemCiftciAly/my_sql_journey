@@ -1,92 +1,95 @@
-# Poverty Dataset – Data Quality Assessment & Cleaning Documentation
+# Labor Force Dataset – Data Quality Notes
 
-## Project Scope
-The analytical scope of this project is **New York counties only**.  
-As with the Labor Force dataset, all data quality checks are performed on the **entire raw (Bronze) dataset** to fully understand data integrity before applying scoped transformations in the Silver layer.
+## How I Approached This Dataset
+The scope of this project is **New York counties only**.  
+That said, I intentionally reviewed the **entire raw dataset first** to understand its overall quality before applying any filters or transformations.
 
----
-
-## Dataset Consistency Note
-The **Poverty dataset is structurally and qualitatively identical to the Labor Force dataset**, including:
-- Column structure
-- Data types
-- Known data quality patterns
-- Scope-related exclusions
-
-As a result, **all data quality checks documented for the Labor Force dataset apply equally to the Poverty dataset**, **except where explicitly noted below**.
+All observations below are based on working directly with the raw (Bronze) data.
 
 ---
 
-## Data Layers
-- **Bronze Layer:** Raw, unmodified source data  
-- **Silver Layer:** Cleaned, standardized, and New York county–level data
+## Space Checks
+The first thing I checked was whether there were any leading or trailing spaces in the text columns.
 
-The Bronze layer remains unchanged.
+- I ran an initial trim and length comparison.
+- I then ran a second, more explicit check using a `CASE WHEN` approach to confirm the results.
 
----
+**Result:**  
+No spaces were found in any of the text columns.
 
-## Data Quality Checks (Inherited from Labor Force Dataset)
-
-The following checks were performed and yielded identical results to the Labor Force dataset:
-
-- Space checks (leading/trailing spaces)
-- Null checks
-- State abbreviation consistency
-- County-level scope filtering
-- County naming issues (evaluated globally, resolved within NY scope)
-
-Refer to **Labor Force Dataset – Data Quality Assessment & Cleaning Documentation** for full methodological detail.
+**What this means:**  
+There is nothing to fix related to spaces. The Silver layer does not need any special handling for this, beyond optional defensive trimming.
 
 ---
 
-## Attribute Value Column – Poverty Dataset (Key Difference)
+## Null Values
+Next, I checked for null values across the dataset.
 
-### Objective
-Ensure the `attribute_value` column is analytically usable at the **county level**.
+**Result:**  
+No null values were found.
 
-### Findings
-Unlike the Labor Force dataset, the Poverty dataset contains **county-level records where `attribute_value` includes both numeric and text components**.
-
-Example pattern:
-- Numeric poverty value followed by descriptive text
-
-This presents a **county-level data quality issue**, not an aggregation or scope violation.
+**What this means:**  
+No null handling is required in the Silver layer.
 
 ---
 
-### Silver Layer Action
-- **Remove the text component** from `attribute_value`
-- **Preserve and cast the numeric portion** as a numeric data type
-- Retain the county record for analysis
+## Attribute Value Column
+I then focused on the `attribute_value` column, since this is the column used directly in analysis.
 
-This enables:
-- Accurate aggregation
-- County inclusion in analysis
-- Consistent numeric operations across datasets
+During this check, I found a value that included a **state-level total for New York** (for example, total civilian labor force for the entire state).
 
----
+**Important context:**  
+This project is focused on **county-level analysis only**.
 
-## Scope Validation
-- All cleaned records remain **county-level**
-- No state-level aggregates are introduced
-- Only **New York counties** are retained in the Silver layer
+**What this means:**  
+- State-level aggregate rows are out of scope.
+- These rows remain unchanged in the Bronze layer.
+- They are **excluded from the Silver layer** so that only county-level data is used in analysis.
 
 ---
 
-## Summary of Silver Layer Handling (Poverty Dataset)
+## State Abbreviation Column
+I reviewed the state abbreviation column to see if there were any inconsistencies (such as lowercase letters or alternate formats).
 
-| Issue | Action |
-|-----|-------|
-| Leading/trailing spaces | No action required |
-| Null values | No action required |
-| State abbreviations | No action required |
-| County naming (NY scope) | Cleaned and standardized |
-| Attribute value (county-level text + numeric) | Text removed, numeric retained |
-| State-level aggregates | Not applicable |
+**Result:**  
+All values are consistently formatted as two-letter uppercase state codes.
+
+**What this means:**  
+No changes are required for this column.
 
 ---
 
-## Notes
-- Differences between datasets are **explicitly documented** to avoid silent assumptions.
-- Cleaning decisions are driven by **project scope and analytical usability**, not convenience.
-- Documentation is intentionally aligned across datasets to ensure consistency and auditability.
+## County Column (Initial Observations)
+Looking at the dataset as a whole, I noticed several county naming issues:
+- Inconsistent capitalization of the word “city”
+- Slashes (`/`) appearing in some county names
+- State abbreviations attached to county names
+- Year values embedded in county-related fields
+
+These are clear data quality issues when looking at the full dataset.
+
+---
+
+## County Column (New York Scope)
+Once I filtered the data to **New York counties only**, the situation became clearer.
+
+**What I found for New York:**
+- Capitalization is consistent.
+- However, some county names still include:
+  - State abbreviations
+  - Embedded year values
+
+**What this means:**  
+In the Silver layer:
+- State abbreviations are removed from county names.
+- Year values are separated into their own column.
+- Only New York county-level records are retained.
+
+---
+
+## Final Notes
+All changes in the Silver layer are driven by:
+- Project scope (New York counties only)
+- The need for clean, analyzable county-level data
+
+The Bronze layer is preserved as a faithful copy of the original dataset.
