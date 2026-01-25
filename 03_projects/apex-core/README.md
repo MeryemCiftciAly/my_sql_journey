@@ -1,4 +1,4 @@
-##Apex-Core: Advanced SQL & Data Analytics Simulation##
+##Apex-Core: Advanced SQL & Data Analytics Simulation## <br>
 ###Project Overview This repository contains a scenario-based simulation of a high-growth platform managing complex user accounts and transactional data. 
 It serves as a daily practice environment for intermediate to advanced PostgreSQL queries, focusing on real-world operational challenges.
 
