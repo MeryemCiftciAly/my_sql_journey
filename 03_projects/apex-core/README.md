@@ -1,9 +1,9 @@
-##Apex-Core: Advanced SQL & Data Analytics Simulation## <br>
-###Project Overview This repository contains a scenario-based simulation of a high-growth platform managing complex user accounts and transactional data. 
+## Apex-Core: Advanced SQL & Data Analytics Simulation## <br>
+### Project Overview: ### This repository contains a scenario-based simulation of a high-growth platform managing complex user accounts and transactional data. 
 It serves as a daily practice environment for intermediate to advanced PostgreSQL queries, focusing on real-world operational challenges.
 
 The Goal To solve business-critical problems using data-driven insights.
-This project emphasizes Business Velocity—the ability to provide accurate data solutions quickly by choosing the most efficient tool (SQL, Python, or Excel) for the task at hand.
+This project emphasizes Business Velocity which is the ability to provide accurate data solutions quickly by choosing the most efficient tool (SQL, Python, or Excel) for the task at hand.
 
 **Core Competencies Demonstrated**
 
