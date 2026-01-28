@@ -44,4 +44,4 @@ SELECT
 	END AS upper_income_estimate,
 	CASE WHEN value_type = 'income' AND attribute_extracted ILIKE '%LB%' THEN attribute_value::NUMERIC
 	END AS lower_income_estimate
-	FROM classified_income
+	FROM ccleaned_attributes_income;
