@@ -1,5 +1,7 @@
 SET search_path to silver;
-
+--========================================
+--Creatıng Silver Layer: Income Fact Table DDL
+--=========================================
 
 CREATE TABLE IF NOT EXISTS silver.income_fact(
 	fips_code INTEGER NOT NULL,
