@@ -4,7 +4,7 @@ Income Fact Table Insert
 
 Purpose: Extract income attribute and value only from the bronze layer
 ========================================================================*/
-
+--Step 1 create a table to reference later with the cleaned attribute data
 WITH cleaned_attributes_income AS(
 	SELECT
 		fips_code,
@@ -44,4 +44,4 @@ SELECT
 	END AS upper_income_estimate,
 	CASE WHEN value_type = 'income' AND attribute_extracted ILIKE '%LB%' THEN attribute_value::NUMERIC
 	END AS lower_income_estimate
-	FROM ccleaned_attributes_income;
+	FROM cleaned_attributes_income;
