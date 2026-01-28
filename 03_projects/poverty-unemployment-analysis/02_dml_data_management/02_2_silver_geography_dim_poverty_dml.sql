@@ -1,8 +1,6 @@
 /*==================================================================
 Poverty Dataset - Silver layer
-
 Geography Dimension Table
-
 Purpose: Store all grography-related data that changes infrequent relative to all other tables
 =============================================================================================*/
 --Step 1 Clean attributes
