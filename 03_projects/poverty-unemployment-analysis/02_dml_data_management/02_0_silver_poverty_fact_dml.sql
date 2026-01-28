@@ -1,5 +1,8 @@
-/* Taking the data from the source table in the bronze layer to populate
-the table in the silver layer */
+/*======================================================================================
+Poverty Dataset - Silver Layer
+Fact Table
+Purpose: Store all none-income attributes and values
+==========================================================================================*/
 
 --Step 1 Clean attributes
 --Extract year from the attribute column and get a clean attribute name
