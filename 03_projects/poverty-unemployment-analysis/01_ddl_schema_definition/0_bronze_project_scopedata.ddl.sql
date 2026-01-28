@@ -1,9 +1,11 @@
 
---==========================================================================
---Project Scope Table Creation: New York Poverty Data
---Purpose: First step before beginning the silver layer
---Extract all New York data from the bronze layer
---==========================================================================
+/*==========================================================================
+ Poverty Dataset - Bronze Layer
+
+Project Scope Table Creation: New York Poverty Data
+Purpose: First step before beginning the silver layer
+Extract all New York data from the bronze layer
+--==========================================================================*/
 
 --Creating table with only New York data for the scope of the project from the bronze layer
 
