@@ -3,6 +3,7 @@
  Poverty Dataset - Bronze Layer
 
 Project Scope Table Creation: New York Poverty Data
+
 Purpose: First step before beginning the silver layer
 Extract all New York data from the bronze layer
 --==========================================================================*/
