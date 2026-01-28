@@ -1,8 +1,6 @@
 /* ====================================================================
 Poverty Dataset - Silver Layer
-
 Income Fact Table Insert
-
 Purpose: Extract income attribute and value only from the bronze layer
 ========================================================================*/
 --Step 1 create a table to reference later with the cleaned attribute data
