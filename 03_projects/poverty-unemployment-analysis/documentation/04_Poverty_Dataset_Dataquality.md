@@ -1,6 +1,6 @@
 📝 
 ## Data Quality Update – Fulton County
-<hr>
+
 **Scope of the Problem**
 
 The anomaly exists in Fulton County in the Poverty dataset (POV017) only.
