@@ -1,3 +1,28 @@
+⚠️ ## Data Quality Update – Fulton County
+<hr>
+**Scope of the Problem**
+
+The anomaly exists in Fulton County in the Poverty dataset (POV017) only.
+
+Labor Force data for Fulton County is valid — there is no anomaly there.
+
+**Impact**
+
+If performing Poverty-only analysis, Fulton County is excluded to avoid skewed results.
+
+If performing Labor Force-only analysis, Fulton County remains included and valid.
+
+If performing combined Poverty-to-Labor Force analysis, including Fulton County from Labor Force would cause a mismatch because there is no corresponding valid Poverty data for comparison.
+
+**Steps Taken**
+
+Fulton County has been removed from the Silver Poverty Fact table.
+
+Fulton County remains in the Labor Force dataset to keep Labor Force-only analyses intact.
+
+Users performing combined analyses must apply a filter to exclude Fulton County, as its absence in Poverty data will create inconsistencies.
+
+
 # Poverty Dataset – Data Quality Notes
 
 ## Note
