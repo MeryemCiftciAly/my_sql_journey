@@ -44,6 +44,14 @@ SELECT
 		ELSE NULL
 	END AS unemployment_rate
 FROM cleaned_attribute_labor
-WHERE attribute_extracted !='Civilian_labor_force';
+WHERE attribute_extracted NOT IN (
+	'Civilian_labor_force',
+	'Median_Household_Income',
+	'Med_HH_Income_Percent_of_State_Total',
+	'Urban_Influence_Code',
+	'Rural_Urban_Continuum_Code',
+	'Metro'
+)
+AND county <> 'New York';
 	
 

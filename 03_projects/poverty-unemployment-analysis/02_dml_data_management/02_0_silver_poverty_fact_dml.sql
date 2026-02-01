@@ -1,7 +1,7 @@
 /*======================================================================================
 Poverty Dataset - Silver Layer
 Fact Table
-Purpose: Store all none-income attributes and values
+Purpose: Store all none-income and geography code attributes and values
 ==========================================================================================*/
 
 --Step 1 Clean attributes
@@ -16,7 +16,7 @@ WITH cleaned_attributes AS(
 		regexp_replace(attribute, '(.*)_[0-9]{4}$', '\1') AS attribute_extracted,
 		attribute_value
 	FROM bronze_source_poverty_ny
-	WHERE attribute_value ~ '^\d+(\.\dt)?$'
+	WHERE attribute_value ~ '^\d+(\.\d+)?$'
 ),
 
 --Step 2 classify attributes
@@ -25,8 +25,7 @@ classified AS(
 	SELECT *,
 		  CASE
 			WHEN attribute_extracted LIKE '%PCT_%' OR attribute_extracted LIKE '%_P%' THEN 'percentage'
-			WHEN attribute_extracted ILIKE '%rural_urban_continuum_code%' OR attribute_extracted ILIKE '%urban_influence_code%' THEN 'code'
-			WHEN attribute_extracted NOT ILIKE '%_INC%' THEN 'count'
+			ELSE 'count'
 		END AS value_type 
 	FROM cleaned_attributes
 )
@@ -40,9 +39,7 @@ INSERT INTO silver.poverty_fact(
 	county,
 	attribute,
 	attribute_value_percent,
-	attribute_value_count,
-	rural_urban_continuum_code,
-	urban_influence_code
+	attribute_value_count	
 )
 
 --Step 4 workhorse
@@ -54,10 +51,7 @@ SELECT
 	county,
 	attribute_extracted AS attribute,
 	CASE WHEN value_type = 'percentage' THEN attribute_value::NUMERIC END AS percentage_value,
-	CASE WHEN value_type = 'count' 		THEN attribute_value::INTEGER END AS count_value,
-	CASE WHEN value_type =  'code' AND attribute_extracted = 'rural_urban_continuum_code' THEN attribute_value::INTEGER
-	END AS rural_urban_continuum_code,
-	CASE WHEN value_type = 'code' AND attribute_extracted = 'urban_influence_code' THEN attribute_value::INTEGER
-	END AS urban_influence_code
+	CASE WHEN value_type = 'count' 		THEN attribute_value::INTEGER END AS count_value
 FROM classified
-WHERE attribute_extracted NOT ILIKE '%_INC%';
+WHERE attribute_extracted NOT ILIKE '%INC%'
+  AND attribute_extracted NOT ILIKE '%CODE%';
