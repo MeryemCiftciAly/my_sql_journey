@@ -1,4 +1,4 @@
-📝 ##Data Quality Update – Fulton County
+📝 ### Data Quality Update – Fulton County
 <hr>
 **Scope of the Problem**
 
