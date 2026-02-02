@@ -1,3 +1,5 @@
+
+SET search_path to silver;
 /*========================================
 Laborforce Dataset - Silver Layer
 Income Fact Table DDL

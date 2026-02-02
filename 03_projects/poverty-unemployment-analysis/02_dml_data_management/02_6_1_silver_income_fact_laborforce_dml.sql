@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 /* ======================================================
 Laborforce Dataset - Silver Layer
 Income Fact Table 
 Purpose: Extract income attribute and value only from the bronze layer
 ====================================================*/
+=======
+/* ====================================================================
+Laborforce Dataset - Silver Layer
+Income Fact Table 
+Purpose: Extract income attribute and value only from the bronze layer
+========================================================================*/
+>>>>>>> a85ad37 (Save files before sync)
 
 WITH cleaned_attributes_income_labor AS(
 	SELECT
@@ -52,3 +60,7 @@ SELECT
 	END AS median_income_rate
 FROM income_attributes
 WHERE county != 'New York';
+<<<<<<< HEAD
+=======
+	
+>>>>>>> a85ad37 (Save files before sync)
