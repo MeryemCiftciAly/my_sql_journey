@@ -32,7 +32,7 @@ WHERE v.kyc_status = 'Rejected'
 ORDER BY v.joined_date ASC;
 
 
-
+--Identifying account that are high risk
 
 SELECT
 	v.user_id,
