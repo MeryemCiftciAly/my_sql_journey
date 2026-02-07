@@ -10,7 +10,7 @@ Access the interactive workbook and project documentation below.
 
 **SQL Query:** capturing_customers.sql
 
-**Executive Summary:** marketing_report_dashboard.pdf
+**Executive Summary:** [Excel Report as a PDF]
 
 ## Disclaimer
 
