@@ -31,8 +31,7 @@ WHERE v.kyc_status = 'Rejected'
 	AND cs.derived_risk_level = 'Poor'
 ORDER BY v.joined_date ASC;
 
-
-
+--Identifying account that are high risk
 
 SELECT
 	v.user_id,
