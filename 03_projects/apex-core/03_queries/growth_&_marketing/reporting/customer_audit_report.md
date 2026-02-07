@@ -8,7 +8,7 @@ Access the interactive workbook and project documentation below.
 
 ### Project Files
 
-**SQL Query:** [capturing_customers.sql]([03_projects/apex-core/03_queries/growth_&_marketing/capturing_customers.sql](https://github.com/MeryemCiftciAly/my_sql_journey/blob/871878a50c633990dcf8e9dcf7a402120e29dc22/03_projects/apex-core/03_queries/growth_%26_marketing/capturing_customers.sql))
+**SQL Query:** capturing_customers.sql
 
 **Executive Summary:** [Excel Report as a PDF]
 
