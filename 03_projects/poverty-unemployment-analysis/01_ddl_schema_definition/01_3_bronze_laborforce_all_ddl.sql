@@ -7,4 +7,4 @@ CREATE TABLE bronze.laborforce_fact(
 	load_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-COMMENT ON bronze.laborforce_fact IS 'Raw data from source unaltered in bronze schema.'
+COMMENT ON TABLE bronze.laborforce_fact IS 'Raw data from source unaltered in bronze schema.'
