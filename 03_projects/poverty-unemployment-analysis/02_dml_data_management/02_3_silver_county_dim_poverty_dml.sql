@@ -6,7 +6,7 @@ Purpose: Serves as a lookup table across all fact and dimension tables
 
 INSERT INTO silver.county_dim_poverty(
     fips_code,
-    stateabbv,
+    stateabbrev,
     county
 )
 SELECT DISTINCT 
