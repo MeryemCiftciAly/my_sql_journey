@@ -10,9 +10,3 @@ SELECT *
 FROM bronze.poverty_fact
 WHERE stateabbrv = 'NY';
 
---Inspecting table after creation
-
-SELECT *
-FROM bronze_source_poverty_ny
-LIMIT 100;
-
