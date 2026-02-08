@@ -11,6 +11,6 @@ INSERT INTO silver.county_dim_poverty(
 )
 SELECT DISTINCT 
 	fips_code,
-  	stateabbrv AS stateabbrev,
+  	stateabbv AS stateabbrev,
   	county
 FROM bronze_source_poverty_ny;
