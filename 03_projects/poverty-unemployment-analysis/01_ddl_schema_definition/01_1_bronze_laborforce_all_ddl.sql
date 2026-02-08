@@ -1,5 +1,5 @@
-*/==================================================================
---Laborforce Dataset - Bronze Layer - Fact Table
+/*==================================================================
+Laborforce Dataset - Bronze Layer - Fact Table
 =====================================================================*/
 
 CREATE TABLE bronze.laborforce_fact(
