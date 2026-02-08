@@ -15,7 +15,6 @@ WITH cleaned_attributes_geography AS(
 		regexp_replace(attribute, '(.*)_[0-9]{4}$', '\1') AS attribute_extracted,
 		attribute_value
 	FROM bronze_source_poverty_ny
-	WHERE attribute_value ~ '^\d+(\.\d+)?$'
 )
 
 --Step 2 Insert into silver layer
