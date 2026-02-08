@@ -1,7 +1,6 @@
 /*===================================================
 Poverty Dataset - Silver Layer
-
-purpose: All attributes and values except income
+Purpose: All attributes and values except income
 --===================================================*/
 
 CREATE TABLE silver.poverty_fact(
@@ -19,5 +18,5 @@ CREATE INDEX idx_poverty_fact_year ON silver.poverty_fact(year);
 CREATE INDEX idx_poverty_fact_fips ON silver.poverty_fact(fips_code);
 CREATE INDEX idx_poverty_fact_attribute ON silver.poverty_fact(attribute);
 
-COMMENT ON TABLE silver.poverty_fact IS 'Standardize and transform data from bronze layer'
+COMMENT ON TABLE silver.poverty_fact IS 'Standardize and transform data from bronze layer';
 
