@@ -8,7 +8,7 @@ CREATE TABLE silver.dim_geography_poverty(
 	fips_code INTEGER NOT NULL,
 	year INTEGER NOT NULL,
 	attribute TEXT NOT NULL,
-	code_value INTEGER NOT NULL,
+	code_value INTEGER,
 	PRIMARY KEY (fips_code, year, attribute)
 );
 
