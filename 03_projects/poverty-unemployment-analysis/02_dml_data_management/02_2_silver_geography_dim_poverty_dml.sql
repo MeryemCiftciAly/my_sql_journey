@@ -9,12 +9,12 @@ Purpose: Store all grography-related data that changes infrequent relative to al
 WITH cleaned_attributes_geography AS(
 	SELECT
 		fips_code,
-		stateabbrv,
+		stateabbv,
 		county,
 		CAST(regexp_replace(attribute, '.*_(\d{4})$', '\1') AS INTEGER) AS year_extracted,
 		regexp_replace(attribute, '(.*)_[0-9]{4}$', '\1') AS attribute_extracted,
 		attribute_value
-	FROM bronze_source_poverty_ny
+	FROM bronze.source_poverty_ny
 )
 
 --Step 2 Insert into silver layer
