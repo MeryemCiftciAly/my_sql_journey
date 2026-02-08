@@ -19,5 +19,5 @@ CREATE TABLE IF NOT EXISTS silver.income_fact_laborforce(
 CREATE INDEX indx_income_fact_laborforce_fips ON silver.income_fact_laborforce (fips_code, county, year);
 CREATE INDEX  indx_income_fact_laborforce_year ON silver.income_fact_laborforce (year);
 
-COMMENT ON TABLE income_fact_laborforce 
+COMMENT ON TABLE silver.income_fact_laborforce
 IS 'Standardize and transformed data from bronze layer includes median income and median income rate'
