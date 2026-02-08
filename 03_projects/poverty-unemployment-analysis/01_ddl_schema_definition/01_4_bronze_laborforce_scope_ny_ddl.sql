@@ -1,9 +1,7 @@
 
 /*==========================================================================
 Laborforce Dataset - Bronze Layer
-
 Project Scope Table Creation: New York laborforce Data
-
 Purpose: Extract all New York data from the bronze layer
 --==========================================================================*/
 
