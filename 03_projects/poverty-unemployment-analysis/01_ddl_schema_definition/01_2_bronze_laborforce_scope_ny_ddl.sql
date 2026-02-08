@@ -1,4 +1,4 @@
-
+SET search_path TO bronze;
 
 CREATE TABLE bronze.source_laborforce_ny AS
 SELECT *
