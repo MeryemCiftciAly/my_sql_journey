@@ -1,7 +1,7 @@
 /*======================================================================================
 Poverty Dataset - Silver Layer
 Fact Table
-Purpose: Store all none-income and geography code attributes and values
+Purpose: Store all non-income and geography code attributes and values
 ==========================================================================================*/
 
 --Step 1 Clean attributes
