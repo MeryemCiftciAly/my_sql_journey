@@ -13,7 +13,6 @@ WITH cleaned_attribute_labor AS(
 		regexp_replace(attribute, '(.*)_[0-9]{4}$', '\1') AS attribute_extracted,
 		attribute_value
  FROM bronze.source_laborforce_ny
- WHERE attribute_value ~ '^\d+(\.\d+)?$'
 )
 INSERT INTO silver.laborforce_fact(
 	fips_code,
