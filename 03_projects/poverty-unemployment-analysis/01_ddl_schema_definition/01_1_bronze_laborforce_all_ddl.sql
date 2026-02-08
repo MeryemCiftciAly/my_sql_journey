@@ -9,7 +9,7 @@ CREATE TABLE bronze.laborforce_fact(
 	attributed TEXT NOT NULL,
 	attribute_value NUMERIC (12,2) NOT NULL,
 	load_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-	PRIMARY KEY (fips_code, county, attributed)
+	PRIMARY KEY (fips_code, county, attribute)
 );
 
 COMMENT ON TABLE bronze.laborforce_fact IS 'Raw data from source unaltered in bronze schema.';
