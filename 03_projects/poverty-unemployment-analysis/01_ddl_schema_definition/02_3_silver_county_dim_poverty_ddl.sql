@@ -14,4 +14,4 @@ CREATE TABLE silver.county_dim_poverty(
 );
 
 COMMENT ON TABLE silver.county_dim_poverty
-IS 'Extracted from bronze layer as lookup table for multı-table queries'
+IS 'Extracted from bronze layer as lookup table for multi-table queries'
