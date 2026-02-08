@@ -1,6 +1,6 @@
 
 /*========================================
-Poverty Dataset -- Bronze Layer
+Poverty Dataset -- Bronze Layer - Fact Table
 --=========================================*/
 
 CREATE TABLE bronze.poverty_fact(
