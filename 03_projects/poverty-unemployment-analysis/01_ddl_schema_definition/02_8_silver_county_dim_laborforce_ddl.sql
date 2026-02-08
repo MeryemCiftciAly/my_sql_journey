@@ -6,7 +6,7 @@ County Dim Table
 CREATE TABLE silver.county_dim_laborforce(
     fips_code INTEGER NOT NULL,
     stateabbrev TEXT NOT NULL,
-    county TEXT NOT NULL,
+    county TEXT,
     PRIMARY KEY (fips_code)
 );
 
