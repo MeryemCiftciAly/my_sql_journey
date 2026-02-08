@@ -1,10 +1,9 @@
-SET search_path to silver;
 
 /*========================================
-Poverty Dataset -- Silver Layer
+Poverty Dataset -- Bronze Layer
 --=========================================*/
 
-CREATE TABLE silver.poverty_fact(
+CREATE TABLE bronze.poverty_fact(
 	fips_code INTEGER NOT NULL,
 	year INTEGER NOT NULL,
 	stateabbrev CHAR(2) NOT NULL,
@@ -17,8 +16,8 @@ CREATE TABLE silver.poverty_fact(
 	PRIMARY KEY (fips_code, year, attribute)
 );
 
-CREATE INDEX idx_poverty_fact_year ON silver.poverty_fact(year);
-CREATE INDEX idx_poverty_fact_fips ON silver.poverty_fact(fips_code);
+CREATE INDEX idx_poverty_fact_year ON bronze.poverty_fact(year);
+CREATE INDEX idx_poverty_fact_fips ON bronze.poverty_fact(fips_code);
 
-COMMENT ON TABLE silver.poverty_fact IS 'Standardize and transform data from bronze layer'
+COMMENT ON TABLE bronze.poverty_fact IS 'Standardize and transform data from bronze layer'
 
