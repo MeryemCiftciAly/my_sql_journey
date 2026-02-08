@@ -10,9 +10,9 @@ CREATE TABLE IF NOT EXISTS silver.income_fact_poverty(
 	stateabbrev CHAR(2) NOT NULL,
 	county TEXT NOT NULL,
 	attribute TEXT NOT NULL,
-	median_income NUMERIC NOT NULL,
-	lower_income_estimate NUMERIC NOT NULL,
-	upper_income_estimate NUMERIC NOT NULL,
+	median_income NUMERIC,
+	lower_income_estimate NUMERIC ,
+	upper_income_estimate NUMERIC,
 	PRIMARY KEY (fips_code, year, attribute)
 );
 
