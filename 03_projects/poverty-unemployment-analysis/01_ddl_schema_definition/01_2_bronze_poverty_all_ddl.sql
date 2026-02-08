@@ -13,5 +13,5 @@ CREATE TABLE bronze.poverty_fact(
 	PRIMARY KEY (fips_code, county, attribute)
 );
 
-COMMENT ON TABLE bronze.povety_fact IS 'Raw data from source unaltered in bronze schema.';
+COMMENT ON TABLE bronze.poverty_fact IS 'Raw data from source unaltered in bronze schema.';
 
