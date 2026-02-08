@@ -1,6 +1,6 @@
 /*===================================================
 Poverty Dataset - Silver Layer
-Purpose: All attributes and values except income
+Purpose: All attributes and values except income and geography
 --===================================================*/
 
 CREATE TABLE silver.poverty_fact(
