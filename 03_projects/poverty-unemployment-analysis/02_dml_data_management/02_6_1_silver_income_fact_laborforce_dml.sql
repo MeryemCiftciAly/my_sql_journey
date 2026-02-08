@@ -13,7 +13,6 @@ WITH cleaned_attributes_income_labor AS(
 		regexp_replace(attribute, '(.*)_[0-9]{4}$', '\1') AS attribute_extracted,
 		attribute_value
 	FROM bronze.source_laborforce_ny
-	WHERE attribute_value ~ '^\d+(\.\d+)?$' 
 ),
 
 income_attributes AS (
