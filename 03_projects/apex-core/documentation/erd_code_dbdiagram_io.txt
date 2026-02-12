@@ -1,0 +1,67 @@
+
+Table users {
+  user_id uuid [primary key]
+  first_name varchar
+  last_name varchar
+  email varchar [unique]
+  lead_source varchar
+  kyc_status varchar
+  created_at timestamp
+  country_code varchar(3)
+  onboarding_date timestamp
+  is_active boolean
+}
+
+Table accounts {
+  account_id uuid [primary key]
+  user_id uuid [ref: > users.user_id]
+  account_type varchar 
+  balance decimal(18,2)
+  currency varchar(3)
+  status varchar 
+  created_at timestamp
+  closed_at timestamp
+}
+
+Table merchants {
+  merchant_id int [primary key]
+  name varchar
+  mcc_code int
+  merchant_category varchar
+}
+
+Table transactions {
+  transaction_id uuid [primary key]
+  sender_account_id uuid [ref: > accounts.account_id]
+  receiver_account_id uuid
+  merchant_id int [ref: > merchants.merchant_id]
+  amount decimal(18,2)
+  category varchar
+  transaction_date date
+  transaction_time time
+  transaction_status varchar
+  created_at timestamp
+}
+
+Table credit_scores {
+  score_id uuid [primary key]
+  user_id uuid [ref: > users.user_id]
+  score_value int
+  refresh_date timestamp
+}
+
+Table marketing_spend {
+  campaign_id int [primary key]
+  total_spend_usd numeric
+  utm_source varchar
+  campaign_month date
+}
+
+Table fraud_alerts {
+  alert_id uuid [primary key]
+  transaction_id uuid [ref: > transactions.transaction_id]
+  user_id uuid [ref: > users.user_id]
+  risk_score int
+  alert_status varchar
+  triggered_at timestamp
+}
