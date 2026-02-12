@@ -1,4 +1,4 @@
-## These queries were created for practicing advance queries with joins
+## These queries were created to practice joins and filtering
 
 ### Objective: 
 Initial SQL practice focusing on basic joins and filtering.
