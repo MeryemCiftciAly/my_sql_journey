@@ -1,12 +1,12 @@
 /* =====================================================================
-SCENARIO 1: Where  users holding their money?
+SCENARIO 2: Where  users holding their money?
 =====================================================================
 OBJECTIVE: 
-Before targeting the savings account users, we need to see where the users are holding their money. Seeing a breakdown of how many users are holding what type of account can give a better idea of where to capture liquidity.
+Before targeting the savings account users, we need to see where the users are holding their money. 
+Seeing a breakdown of how many users are holding what type of account can give a better idea of where to capture liquidity.
 
 TABLE(S) INVOLVED: 
 - accounts (user_id and account_type)
-
 =====================================================================
 */
 
