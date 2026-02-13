@@ -1,4 +1,5 @@
-## This file contains the screenshots of the SQL query results in this folder.
+### This file contains the screenshots of the SQL query results in this folder.
+
 
 | ID | Scenario & Goal | Query Result (Snapshot) |
 | :--- | :--- | :--- |
