@@ -9,7 +9,6 @@ This document outlines the source datasets, key variables, and preparation detai
 **Source:** [U.S. Census Bureau – Small Area Income and Poverty Estimates (SAIPE)](https://www.census.gov/programs-surveys/saipe.html)  
 **Reference Year:** 2023  
 
-
 **Description:**  
 The SAIPE program produces single-year estimates of income and poverty for all counties in the United States, including childhood poverty estimates for school districts. For this project, county-level data is used. This dataset provides income and poverty statistics at the county and state level for 2023.
 
