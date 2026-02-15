@@ -1,6 +1,6 @@
 # Gold Layer Data Documentation
 
-This document outlines the source datasets, key variables, and preparation details for the Gold Layer of the Poverty and Labor Force project. This serves as a reference for analysts and stakeholders to understand the origins, structure, and meaning of the data used.
+This document outlines the source datasets, key variables, and preparation details for the Gold Layer of the Poverty and Labor Force project. This serves as a reference to understand the origins, structure, and meaning of the data used.
 
 ---
 
@@ -8,7 +8,7 @@ This document outlines the source datasets, key variables, and preparation detai
 
 **Source:** [U.S. Census Bureau – Small Area Income and Poverty Estimates (SAIPE)](https://www.census.gov/programs-surveys/saipe.html)  
 **Reference Year:** 2023  
-**Download Date:** *Insert your download date here*  
+
 
 **Description:**  
 The SAIPE program produces single-year estimates of income and poverty for all counties in the United States, including childhood poverty estimates for school districts. For this project, county-level data is used. This dataset provides income and poverty statistics at the county and state level for 2023.
