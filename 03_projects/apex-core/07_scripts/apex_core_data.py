@@ -24,11 +24,11 @@ num_users = 200
 
 # --- DATABASE CONNECTION SETTINGS ---
 # Replace 'your_password' and 'your_db_name' with your actual local Postgres info
-DB_USER = 'postgres'
-DB_PASS = '(Man3go_22.&0+-_,3' # <--- CHANGE THIS
-DB_HOST = 'localhost'
-DB_PORT = '5432'
-DB_NAME = 'apex_core'  # <--- CHANGE THIS
+DB_USER = os.getenv('DB_USER')
+DB_PASS = os.getenv('DB_PASS')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
+DB_NAME = os.getenv('DB_NAME')
 
 engine = create_engine(f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
 

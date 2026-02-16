@@ -17,20 +17,6 @@ I’m actively practicing SQL through:
 
 The purpose is not only to learn, but to **showcase practical, transferable skills** that would be used in a real data analyst or data engineer role.
 
----
-
-## About Nuuraqlyz Analytics (pronounced: new-rack-lyz)
-**I’m actively seeking a full-time role, and in the meantime, I’ve established Nuuraqlyz Analytics as a way to practice and demonstrate my skills.** 
-Through these independent projects, I’m gaining real-world experience with data challenges, using tools like SQL, Python, Excel, Power BI, and Tableau.  
-
-**This work demonstrates my ability to deliver results in a professional, results-oriented environment.** 
-It shows the value I can bring as a contributing member of a company's team, while also providing hands-on assistance to individuals and SMEs who are collaborating on data-driven decisions to achieve their objectives.
-
-📌 Visit my website and vie my projects: [Nuuraqlyz](https://meryemciftcialy.github.io/nuuraqlyz_analytics/)
-
-**About Website:** This website serves as a further demonstration of my skills, as **I built it myself** using a combination of AI prompts, and my knowledge of HTML, CSS, and basic JavaScript.
-
----
 
 ### Why This Repository Matters
 
@@ -42,20 +28,9 @@ I've chosen to learn by doing, which means I:
 
 This hands-on approach has been instrumental in building my fluency and confidence.
 
----
-
-### Acknowledgments
-
-A special thanks to **Baraa Khatib-Salkini**. His videos, roadmaps, newsletters, and feedback have been an essential guide on my learning journey, providing the mentorship needed to grow my skills and career in data.
-
-### Connect With Baraa
-
-* **YouTube:** [DataWithBaraa](https://www.youtube.com/@DataWithBaraa)
----
-
-## 🧭 See what I'm up to besides data analytics
-Explore my broader portfolio and other tools I use here:  
+## Explore my broader portfolio and other tools I use here:  
 🌐 [Work Samples](https://meryemciftcialy.github.io/work_sample/)
 
 ---
+
 
