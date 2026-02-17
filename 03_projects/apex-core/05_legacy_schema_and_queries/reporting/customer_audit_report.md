@@ -10,7 +10,7 @@ Access the interactive workbook and project documentation below.
 
 **SQL Query:** capturing_customers.sql
 
-**Executive Summary:** [Excel Report as a PDF]([03_projects/apex-core/03_queries/growth_&_marketing/reporting/Apex Core - High Value Customer Audit.pdf](03_projects/apex-core/05_legacy_schema_and_queries/reporting/High Value Customer Insight.pdf))
+**Executive Summary:** [Excel Report as a PDF](03_projects/apex-core/05_legacy_schema_and_queries/reporting/High Value Customer Insight.pdf)
 
 ## Disclaimer
 
