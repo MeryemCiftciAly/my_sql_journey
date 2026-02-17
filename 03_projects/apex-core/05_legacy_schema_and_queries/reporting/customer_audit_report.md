@@ -10,7 +10,7 @@ Access the interactive workbook and project documentation below.
 
 **SQL Query:** capturing_customers.sql
 
-**Executive Summary:** [Excel Report as a PDF](03_projects/apex-core/05_legacy_schema_and_queries/reporting/High Value Customer Insight.pdf)
+**Executive Summary:** [Excel Report as a PDF]([03_projects/apex-core/05_legacy_schema_and_queries/reporting/High Value Customer Insight.pdf](https://github.com/MeryemCiftciAly/my_sql_journey/blob/b95c95d905acdbdc69a6aa1057789d56b657319f/03_projects/apex-core/05_legacy_schema_and_queries/reporting/High%20Value%20Customer%20Insight.pdf))
 
 ## Disclaimer
 
