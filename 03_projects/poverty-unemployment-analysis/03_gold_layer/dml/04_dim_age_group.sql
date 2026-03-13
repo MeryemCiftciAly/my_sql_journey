@@ -1,7 +1,5 @@
-SET search_path to gold;
 
 /*===============================
-Poverty Dataset
 Age Dimension Table
 ==================================*/
 
