@@ -1,12 +1,15 @@
---Write a query to find the English title and artist where the average color includes "aaa" order by lowest brightness.Call the results "Brightest aaa Prints".
+-- Write a query to find the English title, artist, and average color
+-- of prints where the average color includes "aaa",
+-- ordered from least bright to brightest.
 
-SELECT english_title AS "Least Bright aaa Prints", artist
+SELECT english_title AS "Least Bright aaa Prints", artist, average_color
 FROM views
-WHERE average_color LIKE '%aaa'
+WHERE average_color LIKE '%aaa%'
 ORDER BY brightness ASC;
 
-+---------------------------------------+---------+
-|             english_title             | artist  |
-+---------------------------------------+---------+
-| A View of Mount Fuji Across Lake Suwa | Hokusai |
-+---------------------------------------+---------+
++-------------------------------------------+---------+---------------+
+|           Least Bright aaa ...            | artist  | average_color |
++-------------------------------------------+---------+---------------+
+| Under Mannen Bridge at Fukagawa           | Hokusai | #aaa999       |
+| Sazai hall - Temple of Five Hundred Rakan | Hokusai | #aaaa94       |
+| Tsukuda Island in Musashi Province        | Hokusai | #aaada0       |
