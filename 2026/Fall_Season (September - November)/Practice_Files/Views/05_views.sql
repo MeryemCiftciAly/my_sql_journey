@@ -10,3 +10,5 @@ WHERE artist = 'Hokusai';
 +------------------+
 |             0.65 |
 +------------------
+
+-- Hokusai's maximum contrast is 0.65. Since contrast ranges from 0 to 1, with 1 representing the highest contrast, a value of 0.65 indicates relatively high contrast between the light and dark areas of the print.
