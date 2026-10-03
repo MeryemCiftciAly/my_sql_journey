@@ -54,11 +54,6 @@ A major focus was understanding the difference between:
 
 For example, finding the **highest brightness value** and finding the **print with the highest brightness** require different approaches.
 
-## Files
-
-- `views.db` — SQLite database used for the exercise
-- `*.sql` — SQL queries written for each question
-
 ## Learning Notes
 
 I am using these exercises to build SQL skills through practice rather than only following tutorials. I am focusing on reading the question carefully, identifying the required columns and conditions, and then building the query step by step.
