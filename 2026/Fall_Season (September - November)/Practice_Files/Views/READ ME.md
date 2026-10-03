@@ -1,6 +1,3 @@
-```md
-# CS50 SQL — Views
-
 ## About
 
 This folder contains my work for **CS50's Introduction to Databases with SQL**, Problem Set 0: **Views**.
@@ -65,4 +62,4 @@ For example, finding the **highest brightness value** and finding the **print wi
 ## Learning Notes
 
 I am using these exercises to build SQL skills through practice rather than only following tutorials. I am focusing on reading the question carefully, identifying the required columns and conditions, and then building the query step by step.
-```
+
