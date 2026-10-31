@@ -1,16 +1,13 @@
 -- =====================================================
 -- Order Details: Data Quality Checks
 -- =====================================================
--- Purpose:
--- Assess the quality and consistency of the order details in the dataset
--- dataset before proceeding with exploratory analysis.
---
 -- Checks include:
--- - Record counts and distinct values
--- - Missing values
--- - Duplicate menu items
--- - Price validity
--- - Consistency of item names and categories
+-- - Record count and dataset structure
+-- - NULL and missing value assessment
+-- - Investigation of missing item IDs
+-- - Duplicate record assessment
+-- - Date and time validity checks
+-- =====================================================
 -- =====================================================
 
 
