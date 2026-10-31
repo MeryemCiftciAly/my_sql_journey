@@ -1,10 +1,12 @@
-# Restaurant Order Analysis
+# Restaurant Order Analysis | Databricks SQL
 
 ## Project Overview
 
-This project uses SQL to explore restaurant menu items and order records, identify patterns in customer ordering behavior, and demonstrate how structured data can support business decisions.
+This project analyzes restaurant order data from Maven Analytics' Restaurant Operations Analysis challenge.
 
-The project is inspired by the Restaurant Operations Analysis guided project from Maven Analytics. It uses the supplied restaurant dataset as a foundation while introducing an additional analytical stage and a structured workflow.
+Using Databricks SQL, the project explores restaurant menu items and order activity to identify patterns, evaluate business performance, and answer key business questions.
+
+The analysis includes data quality checks, exploratory data analysis, and business-focused SQL queries.
 
 ## Project Objectives
 
