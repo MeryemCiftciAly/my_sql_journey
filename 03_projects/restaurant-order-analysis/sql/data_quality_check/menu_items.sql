@@ -31,7 +31,8 @@ FROM workspace.restaurant_db.menu_items
 WHERE price <= 0;
 
 --Checking the range of menu items prices
-SELECT MIN(price) AS `Min Price`, MAX(price) AS `Max Price`, ROUND(AVG(price),2) AS `Average Price`
+SELECT MIN(price) AS `Min Price`, MAX(price) AS `Max Price`,
+       ROUND(AVG(price),2) AS `Average Price`
 FROM workspace.restaurant_db.menu_items;
 
 --Checking  the top 3 cheapest menu items
